@@ -20,36 +20,28 @@ const Services = () => {
   const [selectedService, setSelectedService] = useState(null);
 
   const services = [
-    {
-      icon: faMotorcycle,
-      title: "Computer Science",
-      uni: "Babeș-Bolyai University",
-      level: "Bachelor's degree",
-      interval: "2016-2019",
-      label: "On-campus",
-      image: motoImage,
-  description: `
-    <h6>Bachelor's Thesis - Babeș-Bolyai University, Cluj-Napoca (June 2019)</h6>
-    <p>
-      For my final thesis, I developed an Augmented Reality (AR) system tailored for motorcyclists to enhance road safety and accessibility during traffic navigation. The solution integrates real-time GPS localization, incoming call alerts, and vehicle motion tracking into a heads-up display mounted on the rider's helmet, allowing for minimal distraction and continuous focus on the road.
-    </p>
-    <p>
-      Built on the Android platform, the application also records ride statistics such as average speed and frequently traveled routes, providing riders with meaningful feedback on their habits and performance. This project demonstrates the potential of AR and mobile technologies to improve real-world transportation safety through intuitive, user-centered design.
-    </p>
-    <p>
-      You can view the full thesis <a href="https://drive.google.com/file/d/1iwnmS3eBCoeLfJlNCFY8upSSXVLJYJzL/view?usp=sharing" target="_blank" rel="noopener noreferrer">here</a>.
-    </p>
-  `
-    },
   {
-  icon: faMicroscope,
-  title: "Software Engineering",
-  uni: "Babeș-Bolyai University",
-  level: "Master's degree",
-  interval: "2016-2019",
-  label: "On-campus",
-  image: dnaExplained,
-  description: `
+    icon: faLaptopCode,
+    title: "Learn Data Analysis with Pandas",
+    uni: "Codecademy",
+    interval: "Issued Jan 2023",
+    sortDate: "2023-01-01",
+    label: "Online",
+    description: `<h6>Codecademy</h6> <i>Issued Jan 2023</i>
+      <p>
+      You can view the certificate <a href="https://www.codecademy.com/profiles/anaGhindariu9183074464/certificates/95dd3ed417d7d6c449afffc6401b310a" target="_blank" rel="noopener noreferrer">here</a>.
+    </p>`
+  },
+  {
+    icon: faMicroscope,
+    title: "Software Engineering",
+    uni: "Babeș-Bolyai University",
+    level: "Master's degree",
+    interval: "2016-2019",
+    sortDate: "2019-09-01",
+    label: "On-campus",
+    image: dnaExplained,
+    description: `
     <h6>Master's Thesis - Babeș-Bolyai University, Cluj-Napoca (September 2021)</h6>
     <p>
       Understanding genetically-encoded information plays a crucial role in addressing fundamental questions at the intersection of science and philosophy, such as the mechanisms of evolution, organismal responses to environmental stimuli, and the genetic basis of traits and diseases. Due to the complexity and diversity of cell types, organisms have evolved sophisticated regulatory systems involving temporal factors (cell differentiation and development stages), structural DNA packaging, and protein interactions, particularly transcription factors (TFs), which collectively govern gene expression.
@@ -61,74 +53,94 @@ const Services = () => {
       You can view the full thesis <a href="https://drive.google.com/file/d/15db9vlwC6bNzFw7Uhmo8c7DFs6env1wf/view?usp=sharing" target="_blank" rel="noopener noreferrer">here</a>.
     </p>
   `
-},
-    {
-      icon: faLaptopCode,
-      title: "Learn Data Analysis with Pandas",
-      uni: "Codecademy",
-      interval: "Issued Jan 2023",
-      label: "Online",
-      description: `<h6>Codecademy</h6> <i>Issued Jan 2023</i>
-      <p>
-      You can view the certificate <a href="https://www.codecademy.com/profiles/anaGhindariu9183074464/certificates/95dd3ed417d7d6c449afffc6401b310a" target="_blank" rel="noopener noreferrer">here</a>.
-    </p>`
-    },
-    {
-      icon: faBrain,
-      title: "Neural Networks and Deep Learning",
-       uni: "Coursera",
-      interval: "Issued Jun 2021",
-      label: "Online",
-      description: `<h6>Coursera</h6> <i>Issued Jun 2021</i>
+  },
+  {
+    icon: faBrain,
+    title: "Neural Networks and Deep Learning",
+    uni: "Coursera",
+    interval: "Issued Jun 2021",
+    sortDate: "2021-06-01",
+    label: "Online",
+    description: `<h6>Coursera</h6> <i>Issued Jun 2021</i>
       <p>
       You can view the certificate <a href="https://www.coursera.org/account/accomplishments/verify/9DF5AYDZ4YVK" target="_blank" rel="noopener noreferrer">here</a>.
     </p>`
-    },
-    {
-      icon: faVials,
-      title: "Genome Sequencing (Bioinformatics II)",
-      uni: "Coursera",
-      interval: "Issued Aug 2020",
-      label: "Online",
-      description: `<h6>Coursera</h6> <i>Issued Aug 2020</i>
+  },
+  {
+    icon: faVials,
+    title: "Genome Sequencing (Bioinformatics II)",
+    uni: "Coursera",
+    interval: "Issued Aug 2020",
+    sortDate: "2020-08-01",
+    label: "Online",
+    description: `<h6>Coursera</h6> <i>Issued Aug 2020</i>
       <p>
       You can view the certificate <a href="https://www.coursera.org/account/accomplishments/verify/3G5FNVG7V5FD" target="_blank" rel="noopener noreferrer">here</a>.
     </p>`
-    },
-    {
-      icon: faLeaf,
-      title: "Introduction to Biology",
-      uni: "MIT",
-      interval: "Issued Nov 2019",
-      label: "Online",
-      description: `<h6>Massachusetts Institute of Technology</h6> <i>Issued Nov 2019</i>
+  },
+  {
+    icon: faLeaf,
+    title: "Introduction to Biology",
+    uni: "MIT",
+    interval: "Issued Nov 2019",
+    sortDate: "2019-11-01",
+    label: "Online",
+    description: `<h6>Massachusetts Institute of Technology</h6> <i>Issued Nov 2019</i>
       <p>
       You can view the certificate <a href="https://courses.edx.org/certificates/b1d2e031f1404475ba312b95dbc26a68" target="_blank" rel="noopener noreferrer">here</a>.
     </p>`
-    },
-     {
-      icon: faDna,
-      title: "Finding Hidden Messages in DNA",
-      uni: "Coursera",
-      interval: "Issued Jul 2019",
-      label: "Online",
-      description: `<h6>Coursera</h6> <i>Issued Jul 2019</i>
+  },
+  {
+    icon: faDna,
+    title: "Finding Hidden Messages in DNA",
+    uni: "Coursera",
+    interval: "Issued Jul 2019",
+    sortDate: "2019-07-01",
+    label: "Online",
+    description: `<h6>Coursera</h6> <i>Issued Jul 2019</i>
       <p>
       You can view the certificate <a href="https://www.coursera.org/account/accomplishments/verify/DTJ88Q6B4QPP" target="_blank" rel="noopener noreferrer">here</a>.
     </p>`
-    },
-    {
-      icon: faChartLine,
-      title: "Biology Meets Programming",
-      uni: "Coursera",
-      interval: "Issued Apr 2019",
-      label: "Online",
-      description: `<h6>Coursera</h6> <i>Issued Apr 2019</i>
+  },
+  {
+    icon: faChartLine,
+    title: "Biology Meets Programming",
+    uni: "Coursera",
+    interval: "Issued Apr 2019",
+    sortDate: "2019-04-01",
+    label: "Online",
+    description: `<h6>Coursera</h6> <i>Issued Apr 2019</i>
       <p>
-      You can view the certificate <a href="https://www.coursera.org/account/accomplishments/verify/RQ4572J4S25B" target="_blank" >here</a>.
+      You can view the certificate <a href="https://www.coursera.org/account/accomplishments/verify/RQ4572J4S25B" target="_blank">here</a>.
     </p>`
-    }
-  ];
+  },
+  {
+    icon: faMotorcycle,
+    title: "Computer Science",
+    uni: "Babeș-Bolyai University",
+    level: "Bachelor's degree",
+    interval: "2012-2015",
+    sortDate: "2015-06-01",
+    label: "On-campus",
+    image: motoImage,
+    description: `
+    <h6>Bachelor's Thesis - Babeș-Bolyai University, Cluj-Napoca (June 2019)</h6>
+    <p>
+      For my final thesis, I developed an Augmented Reality (AR) system tailored for motorcyclists to enhance road safety and accessibility during traffic navigation. The solution integrates real-time GPS localization, incoming call alerts, and vehicle motion tracking into a heads-up display mounted on the rider's helmet, allowing for minimal distraction and continuous focus on the road.
+    </p>
+    <p>
+      Built on the Android platform, the application also records ride statistics such as average speed and frequently traveled routes, providing riders with meaningful feedback on their habits and performance. This project demonstrates the potential of AR and mobile technologies to improve real-world transportation safety through intuitive, user-centered design.
+    </p>
+    <p>
+      You can view the full thesis <a href="https://drive.google.com/file/d/1iwnmS3eBCoeLfJlNCFY8upSSXVLJYJzL/view?usp=sharing" target="_blank" rel="noopener noreferrer">here</a>.
+    </p>
+  `
+  }
+];
+
+const sortedServices = services.sort(
+  (a, b) => new Date(b.sortDate) - new Date(a.sortDate)
+);
 
   return (
     <section id="education" className="arlo_tm_section">
@@ -140,7 +152,7 @@ const Services = () => {
           </div>
           <div className="service_list">
             <ul>
-              {services.map((service, idx) => (
+              {sortedServices.map((service, idx) => (
                 <li key={idx}>
                   <div className="list_inner" onClick={() => {
   console.log("Clicked service:", service);
