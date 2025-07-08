@@ -119,7 +119,6 @@ const Services = () => {
     interval: "2012-2015",
     sortDate: "2015-06-01",
     label: "On-campus",
-    image: motoImage,
     description: `
     <h6>Bachelor's Thesis - Babeș-Bolyai University, Cluj-Napoca (June 2019)</h6>
     <p>
