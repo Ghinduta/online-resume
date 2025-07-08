@@ -1030,6 +1030,7 @@ body.resize .arlo_tm_mainpart{
 	float: left;
 	position: relative;
 	margin-bottom: 35px;
+	margin-top: 100px;
 }
 .arlo_tm_modalbox .service_popup_informations .image img{
 	position: relative;
@@ -2656,3 +2657,109 @@ body.resize .arlo_tm_mainpart{
 .label.on-campus {
   background-color:var(--blue-color); /* blue */
 }
+
+.service_popup_overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.service_popup_content {
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  max-width: 600px;
+  max-height: 80vh;
+  overflow-y: auto;
+  position: relative;
+}
+
+.description_wrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.service_popup_informations {
+  background: #fff;
+  max-width: 800px;
+  width: 100%;
+  border-radius: 10px;
+  padding: 20px;
+  position: relative;
+}
+
+.image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+}
+
+.image .main {
+  width: 100%;
+  /* height: 300px; */
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  margin-top: 15px;
+}
+
+.main_title {
+  margin-top: 20px;
+}
+
+.main_title h3 {
+  font-size: 24px;
+  margin: 0;
+}
+
+.descriptions p {
+  margin-top: 15px;
+  line-height: 1.6;
+}
+
+.close_popup {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  cursor: pointer;
+  color: #000;
+}
+
+.close {
+  position: absolute;
+  top: 10px;     /* distance from top */
+  right: 10px;   /* distance from right */
+  z-index: 100;  /* make sure it’s on top */
+}
+
+.close a {
+  color: #000;           /* icon color */
+  font-size: 24px;       /* icon size */
+  text-decoration: none; /* remove underline */
+  cursor: pointer;
+}
+
+.close a:hover {
+  color: #ff4d4f;        /* optional hover color */
+  transition: color 0.2s ease;
+}
+
