@@ -38,7 +38,6 @@ const Services = () => {
     interval: "2016-2019",
     sortDate: "2019-09-01",
     label: "On-campus",
-    image: dnaExplained,
     description: `
     <h6>Master's Thesis - Babeș-Bolyai University, Cluj-Napoca (September 2021)</h6>
     <p>
