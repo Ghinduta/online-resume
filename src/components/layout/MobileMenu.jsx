@@ -43,7 +43,7 @@ const MobileMenu = () => {
       >
         <div className="dropdown_inner">
           <ul className="anchor_nav">
-            {["home", "about", "education", "work experience", "side projects", "contact"].map(
+            {["home", "intro", "education", "work experience", "side projects", "contact"].map(
               (id) => (
                 <li key={id}>
                   <a href={`#${id}`}>
