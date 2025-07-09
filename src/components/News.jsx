@@ -2,23 +2,27 @@ import React from "react";
 
 const newsItems = [
   {
-    date: "Oct 26, 2024",
-    category: "Design",
-    title: "Building portfolio website with Vanilla",
+    date: "2025",
+    category: "UI | Web",
+    title: "Online invitation",
+    link: "https://ghinduta.github.io/family-invite-2/#",
     thumb: "img/thumbs/4-3.jpg",
     image: "img/news/1.jpg",
   },
   {
-    date: "Oct 22, 2024",
-    category: "Design",
-    title: "The guide to converting Angular apps",
+    date: "2025",
+    category: "Family Projects | Web",
+    title: "Parenting millestones",
+    link:"https://rad-gumdrop-9ab237.netlify.app/",
     thumb: "img/thumbs/4-3.jpg",
     image: "img/news/2.jpg",
   },
   {
     date: "Oct 20, 2024",
-    category: "Design",
-    title: "Building a tooltip react components",
+    category: "Learn modern React Course",
+    link:"https://coruscating-begonia-7585b0.netlify.app/",
+    category_link: "https://www.udemy.com/course/react-front-to-back-2022/",
+    title: "Building a feedback app",
     thumb: "img/thumbs/4-3.jpg",
     image: "img/news/3.jpg",
   },
@@ -30,7 +34,7 @@ const News = () => (
       <div className="container">
         <div className="arlo_tm_main_title">
           <span>Blog</span>
-          <h3>Latest Posts</h3>
+          <h3>Personal Projects</h3>
         </div>
         <div className="news_list">
           <ul>
@@ -44,10 +48,24 @@ const News = () => (
                   </div>
                   <div className="details">
                     <div className="meta">
-                      <p>{item.date} in <a className="line_effect" href="#">{item.category}</a></p>
+                        <p>
+                      {item.date} in {' '}
+                      {item.category_link ? (
+                        <a
+                          className="line_effect clickable"
+                          href={item.category_link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          {item.category}
+                        </a>
+                      ) : (
+                        <i className="em_color">{item.category}</i>
+                      )}
+                    </p>
                     </div>
                     <h3 className="title">
-                      <a className="line_effect_2" href="#">{item.title}</a>
+                      <a className="line_effect_2" href={item.link} target="_blank">{item.title}</a>
                     </h3>
                   </div>
                 </div>

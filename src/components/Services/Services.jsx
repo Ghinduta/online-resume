@@ -144,7 +144,7 @@ const sortedServices = services.sort(
         <div className="container">
           <div className="arlo_tm_main_title">
             <span>Education</span>
-            <h3>Foundations of my technical journey</h3>
+            <h3>My Academic Journey</h3>
           </div>
           <div className="service_list">
             <ul>
@@ -159,6 +159,7 @@ const sortedServices = services.sort(
                         <FontAwesomeIcon icon={service.icon} size="lg" className="svg" />
                       </span>
                       <h3 className="title">{service.title}</h3>
+                      
                       {service.uni && <p className="text"><strong>{service.uni}</strong></p>}
                       {service.level && <p className="text">{service.level}</p>}
                       {service.interval && <p className="text">{service.interval}</p>}

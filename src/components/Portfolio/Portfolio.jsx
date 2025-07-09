@@ -1,115 +1,84 @@
-import React from "react";
-import thumb1 from '../../assets/thumbs/1-1.jpg';
+import React, { useState } from 'react';
+import './JobHistory.css'; // Optional: your styles
 
-import img1 from './images/1.jpg';
-import img2 from './images/2.jpg';
-import img3 from './images/3.jpg';
-import img4 from './images/4.jpg';
-import img5 from './images/5.jpg';
-import img6 from './images/6.jpg';
+const jobData = [
+  {
+    jobTitle: "Senior Software Engineer, Qiagen (May 2019 – Present)",
+    jobDescription: `
+      My experience at Qiagen has allowed me to witness the transformative potential of software systems in efficiently processing and visualizing large amounts of data from various sources. As a result, I have gained invaluable insights into the molecular diagnosis and drug discovery fields and recognize the impact that leveraging these insights can have on improving patient outcomes.
 
-const portfolioItems = [
-  {
-    title: "Exotrail House",
-    category: "Youtube",
-    filterClass: "youtube",
-    thumb: thumb1,
-    image: img2,
-    link: "https://www.youtube.com/watch?v=7e90gBu4pas",
-    type: "popup-youtube",
+      At Omicsoft, I have been a member of the software engineering team and facilitated collaboration between bioinformatics, development, and QA teams while contributing to the Omicsoft's comprehensive cloud-enabled NGS analytics product suite.
+
+      As a senior software engineer, I undertook the task of expanding the framework for single cell data analysis by customizing the storage infrastructure, optimizing processing solutions, and implementing graphical components to facilitate the visualization of large volumes of data.
+
+      Additionally, I was entrusted with the integration of multiple bioinformatics tools into cloud-based analysis pipelines, as well as restructuring the integration with AWS. I also played a critical role in laying the groundwork for unit testing, automated integration pipelines, CI pipelines, and the restructuring and monitoring of the AWS development infrastructure.
+
+      My latest contribution involved leading the development of a public web data search engine that utilized .NET Core, PostgreSQL, and a proprietary Omicsoft Data API. This platform streamlined the visualization of data and client engagement processes.
+
+      Through my work at Qiagen, I was able to enhance my skills in requirement gathering, feature analysis across multidisciplinary teams, architecture and scalability design, systems integration, development of complex solutions, and deployment on different operating systems and, last but not least, the opportunity to work with a wide variety of professionals.
+
+      Tech stack: .NET Core, .NET Framework 4.7, AWS services, Python, Google Collab, Boto3, SQLite, PostgreSQL, custom DB and scripting language
+    `,
   },
   {
-    title: "So Skilled",
-    category: "Vimeo",
-    filterClass: "vimeo",
-    thumb: thumb1,
-    image: img1,
-    link: "https://vimeo.com/337293658",
-    type: "popup-vimeo",
+    jobTitle: "NET Software Developer and Co-founder, RiseTech (Sep. 2017 – Feb. 2019)",
+    jobDescription: `
+      Primarily focused on technical processes while also actively engaging with clients to provide business analysis, solution design, and support for their digital solutions.
+
+      Developed and oversaw the architecture of RaBit, a product aimed at small and medium-sized companies to facilitate objective-focused management. Managed project delivery and quality control while contributing to technical and UI/UX vision.
+
+      Other projects included developing a custom ERP warehouse management tool using Asp.Net Web API and Android mobile solutions, as well as an online consulting platform.
+    `,
   },
   {
-    title: "Cashdash Pro",
-    category: "Soundcloud",
-    filterClass: "soundcloud",
-    thumb: thumb1,
-    image: img3,
-    link: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/471954807",
-    type: "soundcloude_link mfp-iframe audio",
-  },
-  {
-    title: "The Techouse",
-    category: "Popup",
-    filterClass: "popup",
-    thumb: thumb1,
-    image: img5,
-    link: img5,
-    type: "zoom",
-  },
-  {
-    title: "Seat Geek",
-    category: "Popup",
-    filterClass: "popup",
-    thumb: thumb1,
-    image: img4,
-    link: img4,
-    type: "zoom",
-  },
-  {
-    title: "Eco Krypton",
-    category: "Content",
-    filterClass: "content",
-    thumb: thumb1,
-    image: img6,
-    link: "#",
-    type: "portfolio_popup",
+    jobTitle: "Software Developer, Pitech+Plus (Sep 2017 - May 2019)",
+    jobDescription: `
+      Managed and supported various .NET projects (ASP.NET MVC, ASP.NET/CORE WEBAPI, and Xamarin).
+
+      Designed and maintained SQL Server databases. Developed front-end and back-end features, analyzed code, and performed unit testing using NUnit and Moq.
+
+      Documented applications and conducted Xamarin-Forms and Xamarin-Android workshops.
+    `,
   },
 ];
 
+const JobHistoryAccordion = () => {
+  const [activeIndex, setActiveIndex] = useState(null);
 
-const Portfolio = () => (
-  <div className="arlo_tm_section" id="work experience">
-    <div className="arlo_tm_portfolio">
-      <div className="container">
-        <div className="arlo_tm_main_title">
-          <span>Works</span>
-          <h3>Creative Portfolio</h3>
-        </div>
+  const toggleAccordion = (index) => {
+    setActiveIndex(index === activeIndex ? null : index);
+  };
 
-        <div className="portfolio_filter">
-          <ul>
-            <li><a href="#" className="current" data-filter="*">All</a></li>
-            <li><a href="#" data-filter=".youtube">Youtube</a></li>
-            <li><a href="#" data-filter=".vimeo">Vimeo</a></li>
-            <li><a href="#" data-filter=".soundcloud">Soundcloud</a></li>
-            <li><a href="#" data-filter=".popup">Popup</a></li>
-            <li><a href="#" data-filter=".content">Content</a></li>
-          </ul>
-        </div>
-
-        <div className="portfolio_list">
-          <ul className="gallery_zoom">
-            {portfolioItems.map((item, index) => (
-              <li className={item.filterClass} key={index}>
-                <div className="list_inner">
-                  <div className="image">
-                    <img src={item.thumb} alt={item.title} />
-                    <div className="main" data-img-url={item.image}></div>
-                  </div>
-                  <div className="overlay"></div>
-                  <div className="details">
-                    <h3>{item.title}</h3>
-                    <span>{item.category}</span>
-                  </div>
-                  <a className={`arlo_tm_full_link ${item.type}`} href={item.link}></a>
+  return (
+    <div className="arlo_tm_section" id="work experience">
+      <div className="arlo_tm_faq">
+        <div className="container">
+          <div className="arlo_tm_main_title">
+            <span>Experience</span>
+            <h3>My Professional Journey</h3>
+          </div>
+          <div className="accordion_wrap">
+            {jobData.map((item, index) => (
+              <div className={`accordion ${activeIndex === index ? 'active' : ''}`} key={index}>
+                <div
+                  className="accordion_header"
+                  onClick={() => toggleAccordion(index)}
+                >
+                  <span className={`plus ${activeIndex === index ? 'open' : ''}`}></span>
+                  <p>{item.jobTitle}</p>
                 </div>
-              </li>
+                {activeIndex === index && (
+                  <div className="accordion_content">
+                    <p style={{ whiteSpace: 'pre-line' }}>{item.jobDescription.trim()}</p>
+                  </div>
+                )}
+              </div>
             ))}
-          </ul>
+          </div>
         </div>
-
       </div>
     </div>
-  </div>
-);
+  );
+};
 
-export default Portfolio;
+export default JobHistoryAccordion;

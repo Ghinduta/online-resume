@@ -2094,110 +2094,7 @@ body.resize .arlo_tm_mainpart{
 	margin-bottom: 0px;
 }
 
-/*---------------------------------------------------*/
-/*	14) ARLO FAQ
-/*---------------------------------------------------*/
 
-.arlo_tm_faq{
-	width: 100%;
-	height: auto;
-	clear: both;
-	float: left;
-	padding: 140px 0px 135px 0px;
-}
-.accordion_wrap{
-	width: 100%;
-	height: auto;
-	clear: both;
-	float: left;
-	margin-top: 80px;
-}
-.accordion .accordion_content{
-	position: relative;
-	overflow: hidden;
-    display: flex;
-    padding: 18px 40px 20px 40px;
-    align-items: center;
-    background-color: var(--purple-color);
-    cursor: pointer;
-}
-.accordion .accordion_content p{
-	color: #ddd;
-}
-.accordion .accordion_content{
-	display: none;
-}
-.accordion{
-	margin-bottom: 15px;
-}
-.accordion.active .plus:after{
-	transform: rotate(-90deg);
-}
-.accordion.active .plus:before{
-	transform: rotate(180deg);
-}
-.accordion .plus{
-	background-color: var(--yellow-color);
-	display: block;
-    width: 30px;
-    height: 30px;
-    right: 40px;
-    position: absolute;
-    top: 50%;
-    margin-top: -15px;
-	z-index: 1;
-}
-.accordion .plus:after{
-	content: '';
-    background-color: #000;
-    position: absolute;
-    width: 2px;
-    height: 12px;
-    top: 50%;
-    left: 50%;
-	margin: -6px 0 0 -1px;
-    display: block;
-	
-	-webkit-transition: all .3s ease;
-	   -moz-transition: all .3s ease;
-	    -ms-transition: all .3s ease;
-	     -o-transition: all .3s ease;
-	        transition: all .3s ease;
-}
-.accordion .plus:before{
-	content: '';
-    background-color: #000;
-    position: absolute;
-    width: 12px;
-    height: 2px;
-    top: 50%;
-    left: 50%;
-    margin: -1px 0 0 -6px;
-    display: block;
-	
-	-webkit-transition: all .3s ease;
-	   -moz-transition: all .3s ease;
-	    -ms-transition: all .3s ease;
-	     -o-transition: all .3s ease;
-	        transition: all .3s ease;
-}
-.accordion .accordion_header p{
-   	font-size: 22px;
-	font-weight: 600;
-	font-family: var(--font-family-poppins);
-	color: #fff;
-}
-.accordion .accordion_header{
-	position: relative;
-	overflow: hidden;
-    min-height: 70px;
-    display: flex;
-    padding: 28px 70px 30px 40px;
-    align-items: center;
-    background-color: var(--purple-color);
-    margin-bottom: 15px;
-    cursor: pointer;
-}
 
 /*---------------------------------------------------*/
 /*	15) ARLO CONTACT
@@ -2763,3 +2660,6 @@ body.resize .arlo_tm_mainpart{
   transition: color 0.2s ease;
 }
 
+.em_color{
+	color: var(--purple-color);
+}
