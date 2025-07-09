@@ -14,7 +14,7 @@ import {
   faLeaf
 } from '@fortawesome/free-solid-svg-icons';
 
-const Services = () => {
+const Education = () => {
   const [selectedService, setSelectedService] = useState(null);
 
   const services = [
@@ -217,4 +217,4 @@ const sortedServices = services.sort(
   );
 };
 
-export default Services;
+export default Education;

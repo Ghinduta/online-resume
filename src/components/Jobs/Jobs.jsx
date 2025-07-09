@@ -42,7 +42,7 @@ const jobData = [
   },
 ];
 
-const JobHistoryAccordion = () => {
+const JobHistory = () => {
   const [activeIndex, setActiveIndex] = useState(null);
 
   const toggleAccordion = (index) => {
@@ -81,4 +81,4 @@ const JobHistoryAccordion = () => {
   );
 };
 
-export default JobHistoryAccordion;
+export default JobHistory;
