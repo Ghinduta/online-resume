@@ -30,7 +30,7 @@ const newsItems = [
     date: "2025",
     category: "Build React app | Web",
     link:"https://online-resume-ana.netlify.app/",
-    title: "Building my own resume",
+    title: "Building an online resume",
     thumb: "img/thumbs/4-3.jpg",
     image: "img/news/3.jpg",
   }
