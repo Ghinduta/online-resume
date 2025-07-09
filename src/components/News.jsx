@@ -3,7 +3,7 @@ import React from "react";
 const newsItems = [
   {
     date: "2025",
-    category: "UI | Web",
+    category: "Build React app | Web",
     title: "Online invitation",
     link: "https://ghinduta.github.io/family-invite-2/#",
     thumb: "img/thumbs/4-3.jpg",
@@ -26,6 +26,14 @@ const newsItems = [
     thumb: "img/thumbs/4-3.jpg",
     image: "img/news/3.jpg",
   },
+  {
+    date: "2025",
+    category: "Build React app | Web",
+    link:"https://online-resume-ana.netlify.app/",
+    title: "Building my own resume",
+    thumb: "img/thumbs/4-3.jpg",
+    image: "img/news/3.jpg",
+  }
 ];
 
 const News = () => (
