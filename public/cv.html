@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ana Ghindariu - CV</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Manrope', sans-serif;
+            font-size: 11pt;
+            line-height: 1.5;
+            color: #1e293b;
+            background: white;
+        }
+
+        .container {
+            max-width: 210mm;
+            margin: 0 auto;
+            padding: 15mm;
+        }
+
+        /* Header */
+        .header {
+            border-bottom: 3px solid #93c5fd;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+        }
+
+        .header h1 {
+            font-size: 32pt;
+            font-weight: 800;
+            color: #1e293b;
+            margin-bottom: 5px;
+        }
+
+        .header .title {
+            font-size: 14pt;
+            font-weight: 600;
+            color: #64748b;
+            margin-bottom: 10px;
+        }
+
+        .contact-info {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            font-size: 10pt;
+            color: #64748b;
+        }
+
+        .contact-info a {
+            color: #3b82f6;
+            text-decoration: none;
+        }
+
+        /* Section */
+        .section {
+            margin-bottom: 25px;
+        }
+
+        .section-title {
+            font-size: 14pt;
+            font-weight: 700;
+            color: #1e293b;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-bottom: 2px solid #93c5fd;
+            padding-bottom: 5px;
+            margin-bottom: 12px;
+        }
+
+        /* Summary */
+        .summary p {
+            text-align: justify;
+            margin-bottom: 10px;
+        }
+
+        /* Skills */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+
+        .skill-category h4 {
+            font-size: 11pt;
+            font-weight: 700;
+            color: #334155;
+            margin-bottom: 8px;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+
+        .skill-tag {
+            display: inline-block;
+            padding: 4px 10px;
+            background-color: #e0f2fe;
+            color: #0c4a6e;
+            font-size: 9pt;
+            font-weight: 500;
+            border-radius: 4px;
+            border: 1px solid #bae6fd;
+        }
+
+        /* Experience */
+        .job {
+            margin-bottom: 20px;
+            page-break-inside: avoid;
+        }
+
+        .job-header {
+            background-color: #93c5fd;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 6px;
+            margin-bottom: 10px;
+        }
+
+        .job-title {
+            font-size: 12pt;
+            font-weight: 700;
+            color: white;
+        }
+
+        .job-content {
+            padding-left: 15px;
+        }
+
+        .job-section-title {
+            font-size: 10pt;
+            font-weight: 700;
+            color: #3b82f6;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-top: 12px;
+            margin-bottom: 8px;
+        }
+
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+            margin-bottom: 10px;
+        }
+
+        .tech-tag {
+            display: inline-block;
+            padding: 3px 8px;
+            background-color: #dbeafe;
+            color: #1e40af;
+            font-size: 8.5pt;
+            font-weight: 500;
+            border-radius: 4px;
+            border: 1px solid #bfdbfe;
+        }
+
+        .responsibilities ul {
+            margin-left: 20px;
+        }
+
+        .responsibilities li {
+            margin-bottom: 6px;
+            list-style-type: none;
+            position: relative;
+            padding-left: 15px;
+        }
+
+        .responsibilities li:before {
+            content: '▸';
+            position: absolute;
+            left: 0;
+            color: #3b82f6;
+            font-weight: bold;
+        }
+
+        .responsibility-category {
+            font-weight: 600;
+            color: #334155;
+            margin-top: 8px;
+            margin-bottom: 4px;
+        }
+
+        .job-description p {
+            text-align: justify;
+            margin-bottom: 8px;
+        }
+
+        /* Education */
+        .education-item {
+            margin-bottom: 15px;
+            page-break-inside: avoid;
+        }
+
+        .education-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 3px;
+        }
+
+        .education-title {
+            font-size: 11pt;
+            font-weight: 700;
+            color: #1e293b;
+        }
+
+        .education-date {
+            font-size: 9pt;
+            color: #64748b;
+        }
+
+        .education-institution {
+            font-size: 10pt;
+            color: #64748b;
+            font-weight: 500;
+        }
+
+        .education-type {
+            font-size: 9pt;
+            color: #94a3b8;
+            font-style: italic;
+        }
+
+        /* Print styles */
+        @media print {
+            body {
+                margin: 0;
+                padding: 0;
+            }
+
+            .container {
+                padding: 10mm;
+            }
+
+            .section {
+                page-break-inside: avoid;
+            }
+
+            .job {
+                page-break-inside: avoid;
+            }
+
+            a {
+                color: #3b82f6;
+                text-decoration: none;
+            }
+        }
+
+        @page {
+            margin: 15mm;
+            size: A4;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>Ana Ghindariu</h1>
+            <div class="title">Senior Software Engineer | .NET Specialist</div>
+            <div class="contact-info">
+                <span>📍 Cluj-Napoca, Romania</span>
+                <span>📧 <a href="mailto:ana.ghindariu@gmail.com">ana.ghindariu@gmail.com</a></span>
+                <span>💼 <a href="https://www.linkedin.com/in/ghindariu-ana-821a22137/">LinkedIn</a></span>
+            </div>
+        </div>
+
+        <!-- Professional Summary -->
+        <div class="section">
+            <h2 class="section-title">Professional Summary</h2>
+            <div class="summary">
+                <p>I am a senior .NET developer specializing in full-lifecycle software development, from enhancing legacy systems to architecting greenfield projects. My work spans C#, ASP.NET Core, Python, and Elasticsearch, often integrating AI and agentic frameworks to automate and optimize workflows.</p>
+            </div>
+        </div>
+
+        <!-- Skills -->
+        <div class="section">
+            <h2 class="section-title">Skills & Expertise</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h4>Programming & Frameworks</h4>
+                    <div class="skill-tags">
+                        <span class="skill-tag">.NET Framework</span>
+                        <span class="skill-tag">.NET Core</span>
+                        <span class="skill-tag">C#</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">React</span>
+                        <span class="skill-tag">ASP.NET</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h4>Databases & Data</h4>
+                    <div class="skill-tags">
+                        <span class="skill-tag">PostgreSQL</span>
+                        <span class="skill-tag">SQL Server</span>
+                        <span class="skill-tag">Elasticsearch</span>
+                        <span class="skill-tag">SQLite</span>
+                        <span class="skill-tag">ETL Pipelines</span>
+                        <span class="skill-tag">Redis</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h4>Cloud & DevOps</h4>
+                    <div class="skill-tags">
+                        <span class="skill-tag">AWS</span>
+                        <span class="skill-tag">CI/CD</span>
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">Git</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h4>Practices & Methodologies</h4>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Agile/Scrum</span>
+                        <span class="skill-tag">Unit Testing</span>
+                        <span class="skill-tag">System Architecture</span>
+                        <span class="skill-tag">Technical Leadership</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h4>AI & Intelligent Systems</h4>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Prompt Engineering</span>
+                        <span class="skill-tag">AI-assisted Content Curation</span>
+                        <span class="skill-tag">Agentic AI Workflows</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Work Experience -->
+        <div class="section">
+            <h2 class="section-title">Work Experience</h2>
+
+            <!-- Qiagen -->
+            <div class="job">
+                <div class="job-header">
+                    <div class="job-title">Senior Software Engineer, Qiagen (May 2019 – Present)</div>
+                </div>
+                <div class="job-content">
+                    <div class="job-section-title">Tech Stack</div>
+                    <div class="tech-tags">
+                        <span class="tech-tag">.NET Framework</span>
+                        <span class="tech-tag">.NET Core</span>
+                        <span class="tech-tag">C#</span>
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">DevExpress</span>
+                        <span class="tech-tag">PostgreSQL</span>
+                        <span class="tech-tag">SQLite</span>
+                        <span class="tech-tag">Elasticsearch</span>
+                        <span class="tech-tag">AWS</span>
+                        <span class="tech-tag">CI/CD</span>
+                        <span class="tech-tag">ETL</span>
+                        <span class="tech-tag">Unit Testing</span>
+                    </div>
+
+                    <div class="job-section-title">Responsibilities</div>
+                    <div class="responsibilities">
+                        <div class="responsibility-category">Legacy System</div>
+                        <ul>
+                            <li>Contributed as an engineering member and liaison between processing, development, and QA teams</li>
+                            <li>Expanded frameworks for single-cell data analysis, developing storage infrastructure and visualization components for large datasets</li>
+                            <li>Integrated bioinformatics tools into cloud-based pipelines and restructured AWS components</li>
+                            <li>Laid the groundwork for unit testing, automated integration pipelines, and CI pipelines; monitored cloud and on-premise infrastructure</li>
+                        </ul>
+
+                        <div class="responsibility-category">Greenfield Projects</div>
+                        <ul>
+                            <li>Designed and delivered two new systems, including an MVP that evolved into a full solution, while migrating core functionalities from legacy monoliths</li>
+                            <li>Built Elasticsearch-based data interrogation and ETL pipelines for data migration and transformation</li>
+                            <li>Implemented caching mechanisms to improve performance and ensured accurate content version tracking</li>
+                            <li>Led requirement gathering, translated business needs into technical design, facilitated Scrum ceremonies, and coordinated across development, QA, and product teams</li>
+                        </ul>
+                    </div>
+
+                    <div class="job-section-title">Overview</div>
+                    <div class="job-description">
+                        <p>Qiagen has been a cornerstone in helping me see how software systems can enable efficient understanding of massive data from numerous sources, leveraging new insights in molecular diagnosis and drug discovery fields. My contribution to Omicsoft, a complete cloud-enabled NGS analytics product, has been as an engineering member, while also an active liaison between the processing, development, and QA teams.</p>
+                        <p>As a senior software engineer, I worked on expanding the existing framework for single cell data analysis, developing customized storage infrastructure, improving the efficiency of processing solutions, and implementing graphical components to visualize large volumes of data. I also contributed to integrating numerous bioinformatics tools into cloud-based analysis pipelines and restructuring parts of the AWS integration.</p>
+                        <p>I had the chance to lay the groundwork for unit testing, automated integration pipelines, CI pipelines, and to restructure and monitor the AWS development infrastructure. My experience spans cloud, on-premise, and SaaS deployments, in both Windows and Linux environments.</p>
+                        <p>Building on this experience, I had the opportunity to design and deliver two greenfield projects, including an MVP that evolved into a full solution, while transitioning core functionalities from a legacy monolith system. I set up Elasticsearch-based data interrogation, designed ETL pipelines for migrating and transforming data, and implemented caching mechanisms to improve performance.</p>
+                        <p>Working at Qiagen gave me the opportunity to grow my skills in requirement gathering, feature analysis across multidisciplinary teams, architecture and scalability design, system integration, complex solution development, and deployment on multiple operating systems — and, most importantly, to collaborate with a wide variety of talented professionals.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- RiseTech -->
+            <div class="job">
+                <div class="job-header">
+                    <div class="job-title">.NET Software Developer and Co-founder, RiseTech (Sep. 2017 – Feb. 2019)</div>
+                </div>
+                <div class="job-content">
+                    <div class="job-description">
+                        <p>Primarily focused on technical processes while also actively engaging with clients to provide business analysis, solution design, and support for their digital solutions.</p>
+                        <p>Developed and oversaw the architecture of RaBit, a product aimed at small and medium-sized companies to facilitate objective-focused management. Managed project delivery and quality control while contributing to technical and UI/UX vision.</p>
+                        <p>Other projects included developing a custom ERP warehouse management tool using Asp.Net Web API and Android mobile solutions, as well as an online consulting platform.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pitech+Plus -->
+            <div class="job">
+                <div class="job-header">
+                    <div class="job-title">Software Developer, Pitech+Plus (Sep 2017 - May 2019)</div>
+                </div>
+                <div class="job-content">
+                    <div class="job-description">
+                        <p>Managed and supported various .NET projects (ASP.NET MVC, ASP.NET/CORE WEBAPI, and Xamarin).</p>
+                        <p>Designed and maintained SQL Server databases. Developed front-end and back-end features, analyzed code, and performed unit testing using NUnit and Moq.</p>
+                        <p>Documented applications and conducted Xamarin-Forms and Xamarin-Android workshops.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Education -->
+        <div class="section">
+            <h2 class="section-title">Education</h2>
+
+            <div class="education-item">
+                <div class="education-header">
+                    <div class="education-title">Master of Software Engineering</div>
+                    <div class="education-date">2016 - 2019</div>
+                </div>
+                <div class="education-institution">Babeș-Bolyai University, Cluj-Napoca</div>
+                <div class="education-type">On-campus</div>
+            </div>
+
+            <div class="education-item">
+                <div class="education-header">
+                    <div class="education-title">Bachelor of Computer Science</div>
+                    <div class="education-date">2012 - 2015</div>
+                </div>
+                <div class="education-institution">Babeș-Bolyai University, Cluj-Napoca</div>
+                <div class="education-type">On-campus</div>
+            </div>
+
+            <div class="education-item">
+                <div class="education-header">
+                    <div class="education-title">Learn Data Analysis with Pandas</div>
+                    <div class="education-date">Jan 2023</div>
+                </div>
+                <div class="education-institution">Codecademy</div>
+                <div class="education-type">Online</div>
+            </div>
+
+            <div class="education-item">
+                <div class="education-header">
+                    <div class="education-title">Neural Networks and Deep Learning</div>
+                    <div class="education-date">Jun 2021</div>
+                </div>
+                <div class="education-institution">Coursera (DeepLearning.AI)</div>
+                <div class="education-type">Online</div>
+            </div>
+
+            <div class="education-item">
+                <div class="education-header">
+                    <div class="education-title">Genome Sequencing (Bioinformatics II)</div>
+                    <div class="education-date">Aug 2020</div>
+                </div>
+                <div class="education-institution">Coursera (University of California San Diego)</div>
+                <div class="education-type">Online</div>
+            </div>
+
+            <div class="education-item">
+                <div class="education-header">
+                    <div class="education-title">Introduction to Biology</div>
+                    <div class="education-date">Nov 2019</div>
+                </div>
+                <div class="education-institution">MIT (via edX)</div>
+                <div class="education-type">Online</div>
+            </div>
+
+            <div class="education-item">
+                <div class="education-header">
+                    <div class="education-title">Finding Hidden Messages in DNA</div>
+                    <div class="education-date">Jul 2019</div>
+                </div>
+                <div class="education-institution">Coursera (University of California San Diego)</div>
+                <div class="education-type">Online</div>
+            </div>
+
+            <div class="education-item">
+                <div class="education-header">
+                    <div class="education-title">Biology Meets Programming</div>
+                    <div class="education-date">Apr 2019</div>
+                </div>
+                <div class="education-institution">Coursera</div>
+                <div class="education-type">Online</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -5,7 +5,7 @@ const HERO_NAME = "Ana Ghindariu";
 const HERO_TAGLINE = "Senior Software Engineer | .NET Specialist";
 const HERO_INTRO = "I am a senior .NET developer specializing in full-lifecycle software development, from enhancing legacy systems to architecting greenfield projects. My work spans C#, ASP.NET Core, Python, and Elasticsearch, often integrating AI and agentic frameworks to automate and optimize workflows.";
 const KEY_SKILLS = [".NET Core", "C#", "Python", "AWS", "React", "Elasticsearch", "AI Integration"];
-const CV_LINK = "/GhindariuCV.pdf";
+const CV_LINK = "/cv.html";
 
 const Hero = () => {
   return (
@@ -29,8 +29,8 @@ const Hero = () => {
               <a className={styles.primaryButton} href="#contact">
                 <span>Contact Me</span>
               </a>
-              <a className={styles.primaryButton} href={CV_LINK} download>
-                <span>Download CV</span>
+              <a className={styles.primaryButton} href={CV_LINK} target="_blank" rel="noopener noreferrer">
+                <span>View CV</span>
               </a>
             </div>
           </div>
