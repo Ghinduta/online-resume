@@ -26,7 +26,7 @@
 .category_title {
   font-size: 16px;
   font-weight: 700;
-  color: var(--main-color);
+  color: var(--text-heading);
   margin-bottom: 15px;
   font-family: var(--font-family-poppins);
   text-transform: uppercase;
@@ -42,19 +42,19 @@
 .skill_badge {
   display: inline-block;
   padding: 8px 16px;
-  background-color: rgba(131, 151, 136, 0.1);
-  color: var(--main-color);
+  background-color: rgba(167, 139, 250, 0.1);
+  color: var(--text-dark);
   font-size: 14px;
   font-weight: 500;
   border-radius: 6px;
-  border: 1px solid rgba(131, 151, 136, 0.2);
+  border: 1px solid rgba(167, 139, 250, 0.2);
   transition: all 0.2s ease;
   font-family: var(--font-family-poppins);
 }
 
 .skill_badge:hover {
-  background-color: rgba(131, 151, 136, 0.2);
-  border-color: var(--main-color);
+  background-color: rgba(167, 139, 250, 0.2);
+  border-color: var(--accent);
   transform: translateY(-2px);
 }
 

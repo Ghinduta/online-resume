@@ -21,12 +21,12 @@
 	overflow: hidden;
     display: block;
     padding: 30px 40px 35px 40px;
-    background-color: var(--purple-color);
+    background-color: rgba(147, 197, 253, 0.15);
     border-radius: 6px;
     margin-bottom: 15px;
 }
 .accordion .accordion_content p{
-	color: #ddd;
+	color: var(--text-dark);
 }
 
 /* Job sections styling */
@@ -40,7 +40,7 @@
 .section-title {
 	font-size: 16px;
 	font-weight: 700;
-	color: var(--yellow-color);
+	color: var(--primary);
 	text-transform: uppercase;
 	letter-spacing: 1px;
 	margin-bottom: 15px;
@@ -58,7 +58,7 @@
 .skill-category {
 	font-size: 14px;
 	font-weight: 600;
-	color: #fff;
+	color: var(--text-heading);
 	margin-bottom: 10px;
 	font-family: var(--font-family-poppins);
 }
@@ -74,7 +74,7 @@
 .responsibility-category {
 	font-size: 15px;
 	font-weight: 600;
-	color: #fff;
+	color: var(--text-heading);
 	margin-bottom: 10px;
 	font-family: var(--font-family-poppins);
 }
@@ -86,7 +86,7 @@
 }
 
 .responsibilities-list li {
-	color: #ddd;
+	color: var(--text-dark);
 	line-height: 1.8;
 	margin-bottom: 12px;
 	padding-left: 20px;
@@ -97,7 +97,7 @@
 	content: '▸';
 	position: absolute;
 	left: 0;
-	color: var(--yellow-color);
+	color: var(--primary);
 	font-weight: bold;
 }
 
@@ -110,24 +110,29 @@
 .tech-badge {
 	display: inline-block;
 	padding: 6px 14px;
-	background-color: rgba(255, 255, 255, 0.1);
-	color: #fff;
+	background-color: rgba(147, 197, 253, 0.2);
+	color: var(--text-dark);
 	font-size: 13px;
 	font-weight: 500;
 	border-radius: 6px;
-	border: 1px solid rgba(255, 255, 255, 0.2);
+	border: 1px solid rgba(147, 197, 253, 0.3);
 	transition: all 0.2s ease;
 }
 
 .tech-badge:hover {
-	background-color: rgba(255, 255, 255, 0.15);
-	border-color: var(--yellow-color);
+	background-color: rgba(147, 197, 253, 0.3);
+	border-color: var(--primary);
 }
 
 .job-description {
-	color: #ddd;
+	color: var(--text-dark);
 	line-height: 1.7;
 	font-size: 15px;
+	margin-bottom: 15px;
+}
+
+.job-description:last-child {
+	margin-bottom: 0;
 }
 .accordion .accordion_content{
 	/* display: none; */
@@ -199,7 +204,7 @@
     display: flex;
     padding: 28px 70px 30px 40px;
     align-items: center;
-    background-color: var(--purple-color);
+    background-color: var(--primary);
     margin-bottom: 15px;
     cursor: pointer;
     border-radius: 6px;

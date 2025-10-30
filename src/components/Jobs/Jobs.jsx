@@ -38,7 +38,13 @@ const jobData = [
         ]
       }
     ],
-    description: "Qiagen has been a cornerstone in helping me see how software systems can enable efficient understanding of massive data from numerous sources, leveraging new insights in molecular diagnosis and drug discovery fields. My contribution to Omicsoft, a complete cloud-enabled NGS analytics product, has been as an engineering member, while also an active liaison between the processing, development, and QA teams. As a senior software engineer, I worked on expanding the existing framework for single cell data analysis, developing customized storage infrastructure, improving the efficiency of processing solutions, and implementing graphical components to visualize large volumes of data. I also contributed to integrating numerous bioinformatics tools into cloud-based analysis pipelines and restructuring parts of the AWS integration. I had the chance to lay the groundwork for unit testing, automated integration pipelines, CI pipelines, and to restructure and monitor the AWS development infrastructure. My experience spans cloud, on-premise, and SaaS deployments, in both Windows and Linux environments. Working at Qiagen gave me the opportunity to grow my skills in requirement gathering, feature analysis across multidisciplinary teams, architecture and scalability design, system integration, complex solution development, and deployment on multiple operating systems — and, most importantly, to collaborate with a wide variety of talented professionals. Building on this experience, I had the opportunity to design and deliver two greenfield projects, including an MVP that evolved into a full solution, while transitioning core functionalities from a legacy monolith system. I set up Elasticsearch-based data interrogation, designed ETL pipelines for migrating and transforming data, and implemented caching mechanisms to improve performance. I also ensured accurate content version tracking and acted as the main requirement gatherer, translating business needs into technical designs. Additionally, I facilitated key Scrum ceremonies, guided the team in technical execution, and collaborated closely with the product team to define priorities and workflows."
+    description: [
+      "Qiagen has been a cornerstone in helping me see how software systems can enable efficient understanding of massive data from numerous sources, leveraging new insights in molecular diagnosis and drug discovery fields. My contribution to Omicsoft, a complete cloud-enabled NGS analytics product, has been as an engineering member, while also an active liaison between the processing, development, and QA teams.",
+      "As a senior software engineer, I worked on expanding the existing framework for single cell data analysis, developing customized storage infrastructure, improving the efficiency of processing solutions, and implementing graphical components to visualize large volumes of data. I also contributed to integrating numerous bioinformatics tools into cloud-based analysis pipelines and restructuring parts of the AWS integration.",
+      "I had the chance to lay the groundwork for unit testing, automated integration pipelines, CI pipelines, and to restructure and monitor the AWS development infrastructure. My experience spans cloud, on-premise, and SaaS deployments, in both Windows and Linux environments.",
+      "Building on this experience, I had the opportunity to design and deliver two greenfield projects, including an MVP that evolved into a full solution, while transitioning core functionalities from a legacy monolith system. I set up Elasticsearch-based data interrogation, designed ETL pipelines for migrating and transforming data, and implemented caching mechanisms to improve performance.",
+      "Working at Qiagen gave me the opportunity to grow my skills in requirement gathering, feature analysis across multidisciplinary teams, architecture and scalability design, system integration, complex solution development, and deployment on multiple operating systems — and, most importantly, to collaborate with a wide variety of talented professionals."
+    ]
   },
   {
     jobTitle: "NET Software Developer and Co-founder, RiseTech (Sep. 2017 – Feb. 2019)",
@@ -125,7 +131,13 @@ const JobHistory = () => {
                         {item.description && (
                           <div className="job-section">
                             <h4 className="section-title">Overview</h4>
-                            <p className="job-description">{item.description}</p>
+                            {Array.isArray(item.description) ? (
+                              item.description.map((paragraph, idx) => (
+                                <p key={idx} className="job-description">{paragraph}</p>
+                              ))
+                            ) : (
+                              <p className="job-description">{item.description}</p>
+                            )}
                           </div>
                         )}
                       </>

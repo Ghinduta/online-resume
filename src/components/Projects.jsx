@@ -13,7 +13,7 @@ const newsItems = [
     date: "2025",
     category: "Family Projects | Web",
     title: "Parenting millestones",
-    link:"https://rad-gumdrop-9ab237.netlify.app/",
+    link:"https://parentpace.org/",
     thumb: "img/thumbs/4-3.jpg",
     image: "img/news/2.jpg",
   },

@@ -10,40 +10,28 @@ const CV_LINK = "/GhindariuCV.pdf";
 const Hero = () => {
   return (
     <section id="home" className="arlo_tm_section">
-      <div className={styles.heroSplit}>
+      <div className={styles.heroContainer}>
         <div className="container">
-          <div className={styles.splitContainer}>
-            {/* Left Side */}
-            <div className={styles.leftSide}>
-              <h1 className={styles.heroName}>{HERO_NAME}</h1>
-              <p className={styles.heroTagline}>{HERO_TAGLINE}</p>
-              <div className={styles.heroButtons}>
-                <a className={styles.primaryButton} href="#contact">
-                  <span>Contact Me</span>
-                </a>
-                <a className={styles.primaryButton} href={CV_LINK} download>
-                  <span>Download CV</span>
-                </a>
+          <div className={styles.heroContent}>
+            <div className="arlo_tm_main_title">
+              <h3>Hi there! I'm Ana!</h3>
+            </div>
+            <p className={styles.introText}>{HERO_INTRO}</p>
+            <div className={styles.keySkills}>
+              <h4 className={styles.skillsLabel}>Key Skills</h4>
+              <div className={styles.skillsBadges}>
+                {KEY_SKILLS.map((skill, idx) => (
+                  <span key={idx} className={styles.skillBadge}>{skill}</span>
+                ))}
               </div>
             </div>
-
-            {/* Right Side */}
-            <div className={styles.rightSide}>
-              <div className={styles.aboutSection}>
-                <div className="arlo_tm_main_title">
-                  <span>About</span>
-                  <h3>Hi there! I'm Ana!</h3>
-                </div>
-                <p className={styles.introText}>{HERO_INTRO}</p>
-                <div className={styles.keySkills}>
-                  <h4 className={styles.skillsLabel}>Key Skills</h4>
-                  <div className={styles.skillsBadges}>
-                    {KEY_SKILLS.map((skill, idx) => (
-                      <span key={idx} className={styles.skillBadge}>{skill}</span>
-                    ))}
-                  </div>
-                </div>
-              </div>
+            <div className={styles.heroButtons}>
+              <a className={styles.primaryButton} href="#contact">
+                <span>Contact Me</span>
+              </a>
+              <a className={styles.primaryButton} href={CV_LINK} download>
+                <span>Download CV</span>
+              </a>
             </div>
           </div>
         </div>
