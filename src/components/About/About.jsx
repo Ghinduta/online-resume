@@ -4,12 +4,7 @@ const aboutData = {
   title: "About",
   heading: "Hi there! I'm Ana!",
   paragraphs: [
-    `I’m passionate about building safe, trustworthy systems that make a real difference. 
-     I’ve spent my career honing my skills to contribute to projects that align with my values—especially those 
-     that help advance human understanding or tackle meaningful, real-world challenges.`,
-
-    `I care deeply about designing systems that are reliable, fault-tolerant, and efficient—no matter the scale of the data. 
-     I love staying up to date with the latest technologies and using them to create solutions that are not only innovative but built to last.`,
+    `I am a senior .NET developer specializing in full-lifecycle software development, from enhancing legacy systems to architecting greenfield projects. My work spans C#, ASP.NET Core, Python, and Elasticsearch, often integrating AI and agentic frameworks to automate and optimize workflows. I also contribute to team organization, acting as a liaison between multiple teams and implementing Scrum practices to drive project efficiency. I focus on building scalable, fault-tolerant systems that are maintainable and high-performing.`,
   ],
   cvLink: "/GhindariuCV.pdf",
   cvText: "Download CV",

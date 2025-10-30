@@ -1,5 +1,5 @@
 import React from "react";
-import aboutBg from './images/ana.jpg';
+import aboutBg from '../../../assets/images/acorn.jpg';
 
 const Sidebar = () => (
   <aside className="arlo_tm_sidebar">

@@ -25,14 +25,6 @@ const newsItems = [
     title: "Building a feedback app",
     thumb: "img/thumbs/4-3.jpg",
     image: "img/news/3.jpg",
-  },
-  {
-    date: "2025",
-    category: "Build React app | Web",
-    link:"https://online-resume-ana.netlify.app/",
-    title: "Building an online resume",
-    thumb: "img/thumbs/4-3.jpg",
-    image: "img/news/3.jpg",
   }
 ];
 
