@@ -43,15 +43,18 @@ const MobileMenu = () => {
       >
         <div className="dropdown_inner">
           <ul className="anchor_nav">
-            {["home", "intro", "education", "work experience", "side projects", "contact"].map(
-              (id) => (
-                <li key={id}>
-                  <a href={`#${id}`}>
-                    {id.charAt(0).toUpperCase() + id.slice(1)}
-                  </a>
-                </li>
-              )
-            )}
+            {[
+              { id: 'home', label: 'Hello world!' },
+              { id: 'skills', label: 'Skills' },
+              { id: 'work experience', label: 'Work experience' },
+              { id: 'education', label: 'Education' },
+              { id: 'portfolio', label: 'Portfolio' },
+              { id: 'contact', label: 'Contact' }
+            ].map((item) => (
+              <li key={item.id}>
+                <a href={`#${item.id}`}>{item.label}</a>
+              </li>
+            ))}
           </ul>
         </div>
       </div>
