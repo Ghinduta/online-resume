@@ -29,11 +29,11 @@ const newsItems = [
 ];
 
 const News = () => (
-  <div className="arlo_tm_section" id="side projects">
+  <div className="arlo_tm_section" id="portfolio">
     <div className="arlo_tm_news">
       <div className="container">
         <div className="arlo_tm_main_title">
-          <span>Blog</span>
+          <span>Portfolio</span>
           <h3>Personal Projects</h3>
         </div>
         <div className="news_list">

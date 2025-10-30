@@ -1,48 +1,51 @@
-import React, { useEffect, useState } from "react";
-import styles from "./Hero.module.css"; 
+import React from "react";
+import styles from "./Hero.module.css";
 
 const HERO_NAME = "Ana Ghindariu";
-const HERO_TITLES = [
-  "Senior Software Engineer (Specializing in .NET Ecosystem)",
-  "Data-Driven Development Enthusiast",
-  "Python Aficionado",
-  "React Explorer",
-  "Cloud Technology Advocate"
-];
-
-const HERO_BUTTON_TEXT = "Contact Me";
+const HERO_TAGLINE = "Senior Software Engineer | .NET Specialist";
+const HERO_INTRO = "I am a senior .NET developer specializing in full-lifecycle software development, from enhancing legacy systems to architecting greenfield projects. My work spans C#, ASP.NET Core, Python, and Elasticsearch, often integrating AI and agentic frameworks to automate and optimize workflows.";
+const KEY_SKILLS = [".NET Core", "C#", "Python", "AWS", "React", "Elasticsearch", "AI Integration"];
+const CV_LINK = "/GhindariuCV.pdf";
 
 const Hero = () => {
-  const [index, setIndex] = useState(0);
-  const [fading, setFading] = useState(false);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setFading(true);
-      setTimeout(() => {
-        setIndex((prev) => (prev + 1) % HERO_TITLES.length);
-        setFading(false);
-      }, 400); // match fade-out duration
-    }, 3000);
-
-    return () => clearInterval(interval);
-  }, []);
-
   return (
-    <section id="home" className="arlo_tm_section arlo_tm_hero">
-      <div className="content">
-        <h3 className="name" style={{ color: "#348aa7" }}>{HERO_NAME}</h3>
-        <div className={styles.animateText}>
-          <span className={`${styles.text} ${fading ? styles.fadeOut : styles.fadeIn}`}>
-            {HERO_TITLES[index]}
-          </span>
-        </div>
-        <div className="arlo_tm_button" data-position="center">
-          <a className="anchor" href="#contact" style={{
-            borderRadius: "6px"
-          }}>
-            <span>{HERO_BUTTON_TEXT}</span>
-          </a>
+    <section id="home" className="arlo_tm_section">
+      <div className={styles.heroSplit}>
+        <div className="container">
+          <div className={styles.splitContainer}>
+            {/* Left Side */}
+            <div className={styles.leftSide}>
+              <h1 className={styles.heroName}>{HERO_NAME}</h1>
+              <p className={styles.heroTagline}>{HERO_TAGLINE}</p>
+              <div className={styles.heroButtons}>
+                <a className={styles.primaryButton} href="#contact">
+                  <span>Contact Me</span>
+                </a>
+                <a className={styles.primaryButton} href={CV_LINK} download>
+                  <span>Download CV</span>
+                </a>
+              </div>
+            </div>
+
+            {/* Right Side */}
+            <div className={styles.rightSide}>
+              <div className={styles.aboutSection}>
+                <div className="arlo_tm_main_title">
+                  <span>About</span>
+                  <h3>Hi there! I'm Ana!</h3>
+                </div>
+                <p className={styles.introText}>{HERO_INTRO}</p>
+                <div className={styles.keySkills}>
+                  <h4 className={styles.skillsLabel}>Key Skills</h4>
+                  <div className={styles.skillsBadges}>
+                    {KEY_SKILLS.map((skill, idx) => (
+                      <span key={idx} className={styles.skillBadge}>{skill}</span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

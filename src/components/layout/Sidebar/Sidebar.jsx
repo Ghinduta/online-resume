@@ -14,7 +14,7 @@ const Sidebar = () => (
     </div>
     <nav className="menu scrollable">
       <ul className="anchor_nav">
-        {['home', 'intro', 'skills', 'work experience', 'education', 'side projects', 'contact'].map((id) => (
+        {['home', 'skills', 'work experience', 'education', 'portfolio', 'contact'].map((id) => (
           <li key={id}>
             <a href={`#${id}`}>{id.charAt(0).toUpperCase() + id.slice(1)}</a>
           </li>

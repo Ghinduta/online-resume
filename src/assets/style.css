@@ -919,6 +919,7 @@ body.resize .arlo_tm_mainpart{
 	box-shadow: 0px 0px 30px rgba(0,0,0,.12);
 	padding: 70px 50px 60px 50px;
 	overflow: hidden;
+	border-radius: 6px;
 }
 .arlo_tm_services .list_inner:before{
 	position: absolute;
@@ -1951,10 +1952,13 @@ body.resize .arlo_tm_mainpart{
 	float: left;
 	position: relative;
 	box-shadow: 0px 0px 30px rgb(0 0 0 / 12%);
+	border-radius: 6px;
+	overflow: hidden;
 }
 .arlo_tm_news .news_list ul li .image{
 	position: relative;
 	overflow: hidden;
+	border-radius: 6px 6px 0 0;
 }
 .arlo_tm_news .news_list ul li .image img{
 	position: relative;

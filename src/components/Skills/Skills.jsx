@@ -8,7 +8,7 @@ const skillsData = [
   },
   {
     category: "Databases & Data",
-    skills: ["PostgreSQL", "SQL Server", "Elasticsearch", "SQLite", "ETL Pipelines"]
+    skills: ["PostgreSQL", "SQL Server", "Elasticsearch", "SQLite", "ETL Pipelines", "Redis"]
   },
   {
     category: "Cloud & DevOps",
