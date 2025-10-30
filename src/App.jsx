@@ -1,6 +1,7 @@
 import React from "react";
 import Hero from "./components/Hero/Hero";
 import About from "./components/About/About";
+import Skills from "./components/Skills/Skills";
 import Education from "./components/Education/Education";
 import JobHistory from "./components/Jobs/Jobs";
 import News from "./components/Projects";
@@ -16,6 +17,7 @@ function App() {
       <main className="arlo_tm_mainpart">
         <Hero />
         <About />
+        <Skills />
         <JobHistory />
         <Education />
         <News />
