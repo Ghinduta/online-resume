@@ -912,15 +912,15 @@ body.resize .arlo_tm_mainpart{
 	z-index: 2;
 }
 .arlo_tm_services .service_list ul{
-	margin: 0px 0px 0px -50px;
+	margin: 0px 0px 0px -30px;
 	list-style-type: none;
 	display: flex;
 	flex-wrap: wrap;
 }
 .arlo_tm_services .service_list ul li{
-	margin: 0px 0px 50px 0px;
-	padding-left: 50px;
-	width: 33.3333%;
+	margin: 0px 0px 30px 0px;
+	padding-left: 30px;
+	width: 25%;
 	float: left;
 }
 .arlo_tm_services .service_list ul li .list_inner{
@@ -930,7 +930,7 @@ body.resize .arlo_tm_mainpart{
 	float: left;
 	position: relative;
 	box-shadow: 0px 0px 30px rgba(0,0,0,.12);
-	padding: 70px 50px 60px 50px;
+	padding: 40px 30px 35px 30px;
 	overflow: hidden;
 	border-radius: 6px;
 }
@@ -961,7 +961,7 @@ body.resize .arlo_tm_mainpart{
 	border-radius: 100%;
 	background-color: var(--purple-color);
 	margin-bottom: 27px;
-	
+
 	-webkit-transition: all .3s ease;
 	   -moz-transition: all .3s ease;
 	    -ms-transition: all .3s ease;
@@ -976,7 +976,7 @@ body.resize .arlo_tm_mainpart{
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%,-50%);
-	
+
 	-webkit-transition: all .3s ease;
 	   -moz-transition: all .3s ease;
 	    -ms-transition: all .3s ease;
@@ -990,9 +990,9 @@ body.resize .arlo_tm_mainpart{
 	background-color: var(--yellow-color);
 }
 .arlo_tm_services .service_list .title{
-	font-size: 22px;
-	margin-bottom: 20px;
-	
+	font-size: 18px;
+	margin-bottom: 12px;
+
 	-webkit-transition: all .3s ease;
 	   -moz-transition: all .3s ease;
 	    -ms-transition: all .3s ease;

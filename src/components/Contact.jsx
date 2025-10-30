@@ -23,22 +23,18 @@ const contactDetails = [
   },
   {
     icon: faLinkedin,
-    label: "Social:",
+    label: "LinkedIn:",
     content: (
-      <ul className="social">
-        <li>
-          <h3>
-            <a
-              className="line_effect"
-              href="https://www.linkedin.com/in/ghindariu-ana-821a22137/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FontAwesomeIcon icon={faLinkedin} /> In.
-            </a>
-          </h3>
-        </li>
-      </ul>
+      <h3>
+        <a
+          className="line_effect"
+          href="https://www.linkedin.com/in/ghindariu-ana-821a22137/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          linkedin.com/in/ghindariu-ana
+        </a>
+      </h3>
     ),
   },
 ];
