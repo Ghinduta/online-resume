@@ -4,21 +4,41 @@ import './JobHistory.css'; // Optional: your styles
 const jobData = [
   {
     jobTitle: "Senior Software Engineer, Qiagen (May 2019 – Present)",
-    jobDescription: `
-      My experience at Qiagen has allowed me to witness the transformative potential of software systems in efficiently processing and visualizing large amounts of data from various sources. As a result, I have gained invaluable insights into the molecular diagnosis and drug discovery fields and recognize the impact that leveraging these insights can have on improving patient outcomes.
-
-      At Omicsoft, I have been a member of the software engineering team and facilitated collaboration between bioinformatics, development, and QA teams while contributing to the Omicsoft's comprehensive cloud-enabled NGS analytics product suite.
-
-      As a senior software engineer, I undertook the task of expanding the framework for single cell data analysis by customizing the storage infrastructure, optimizing processing solutions, and implementing graphical components to facilitate the visualization of large volumes of data.
-
-      Additionally, I was entrusted with the integration of multiple bioinformatics tools into cloud-based analysis pipelines, as well as restructuring the integration with AWS. I also played a critical role in laying the groundwork for unit testing, automated integration pipelines, CI pipelines, and the restructuring and monitoring of the AWS development infrastructure.
-
-      My latest contribution involved leading the development of a public web data search engine that utilized .NET Core, PostgreSQL, and a proprietary Omicsoft Data API. This platform streamlined the visualization of data and client engagement processes.
-
-      Through my work at Qiagen, I was able to enhance my skills in requirement gathering, feature analysis across multidisciplinary teams, architecture and scalability design, systems integration, development of complex solutions, and deployment on different operating systems and, last but not least, the opportunity to work with a wide variety of professionals.
-
-      Tech stack: .NET Core, .NET Framework 4.7, AWS services, Python, Google Collab, Boto3, SQLite, PostgreSQL, custom DB and scripting language
-    `,
+    techStack: [
+      ".NET Framework",
+      ".NET Core",
+      "C#",
+      "Python",
+      "DevExpress",
+      "PostgreSQL",
+      "SQLite",
+      "Elasticsearch",
+      "AWS",
+      "CI/CD",
+      "ETL",
+      "Unit Testing"
+    ],
+    responsibilities: [
+      {
+        category: "Legacy System ",
+        items: [
+          "Contributed as an engineering member and liaison between processing, development, and QA teams",
+          "Expanded frameworks for single-cell data analysis, developing storage infrastructure and visualization components for large datasets",
+          "Integrated bioinformatics tools into cloud-based pipelines and restructured AWS components",
+          "Laid the groundwork for unit testing, automated integration pipelines, and CI pipelines; monitored cloud and on-premise infrastructure"
+        ]
+      },
+      {
+        category: "Greenfield Projects",
+        items: [
+          "Designed and delivered two new systems, including an MVP that evolved into a full solution, while migrating core functionalities from legacy monoliths",
+          "Built Elasticsearch-based data interrogation and ETL pipelines for data migration and transformation",
+          "Implemented caching mechanisms to improve performance and ensured accurate content version tracking",
+          "Led requirement gathering, translated business needs into technical design, facilitated Scrum ceremonies, and coordinated across development, QA, and product teams"
+        ]
+      }
+    ],
+    description: "Qiagen has been a cornerstone in helping me see how software systems can enable efficient understanding of massive data from numerous sources, leveraging new insights in molecular diagnosis and drug discovery fields. My contribution to Omicsoft, a complete cloud-enabled NGS analytics product, has been as an engineering member, while also an active liaison between the processing, development, and QA teams. As a senior software engineer, I worked on expanding the existing framework for single cell data analysis, developing customized storage infrastructure, improving the efficiency of processing solutions, and implementing graphical components to visualize large volumes of data. I also contributed to integrating numerous bioinformatics tools into cloud-based analysis pipelines and restructuring parts of the AWS integration. I had the chance to lay the groundwork for unit testing, automated integration pipelines, CI pipelines, and to restructure and monitor the AWS development infrastructure. My experience spans cloud, on-premise, and SaaS deployments, in both Windows and Linux environments. Working at Qiagen gave me the opportunity to grow my skills in requirement gathering, feature analysis across multidisciplinary teams, architecture and scalability design, system integration, complex solution development, and deployment on multiple operating systems — and, most importantly, to collaborate with a wide variety of talented professionals. Building on this experience, I had the opportunity to design and deliver two greenfield projects, including an MVP that evolved into a full solution, while transitioning core functionalities from a legacy monolith system. I set up Elasticsearch-based data interrogation, designed ETL pipelines for migrating and transforming data, and implemented caching mechanisms to improve performance. I also ensured accurate content version tracking and acted as the main requirement gatherer, translating business needs into technical designs. Additionally, I facilitated key Scrum ceremonies, guided the team in technical execution, and collaborated closely with the product team to define priorities and workflows."
   },
   {
     jobTitle: "NET Software Developer and Co-founder, RiseTech (Sep. 2017 – Feb. 2019)",
@@ -69,7 +89,49 @@ const JobHistory = () => {
                 </div>
                 {activeIndex === index && (
                   <div className="accordion_content">
-                    <p style={{ whiteSpace: 'pre-line' }}>{item.jobDescription.trim()}</p>
+                    {item.responsibilities ? (
+                      <>
+                        <div className="job-section">
+                          <h4 className="section-title">Tech Stack</h4>
+                          <div className="tech-stack">
+                            {item.techStack.map((tech, idx) => (
+                              <span key={idx} className="tech-badge">{tech}</span>
+                            ))}
+                          </div>
+                        </div>
+                        <div className="job-section">
+                          <h4 className="section-title">Responsibilities</h4>
+                          {Array.isArray(item.responsibilities) && item.responsibilities.length > 0 && (
+                            typeof item.responsibilities[0] === 'object' && item.responsibilities[0].category ? (
+                              item.responsibilities.map((respGroup, idx) => (
+                                <div key={idx} className="responsibility-group">
+                                  <h5 className="responsibility-category">{respGroup.category}</h5>
+                                  <ul className="responsibilities-list">
+                                    {respGroup.items.map((item, itemIdx) => (
+                                      <li key={itemIdx}>{item}</li>
+                                    ))}
+                                  </ul>
+                                </div>
+                              ))
+                            ) : (
+                              <ul className="responsibilities-list">
+                                {item.responsibilities.map((resp, idx) => (
+                                  <li key={idx}>{resp}</li>
+                                ))}
+                              </ul>
+                            )
+                          )}
+                        </div>
+                        {item.description && (
+                          <div className="job-section">
+                            <h4 className="section-title">Overview</h4>
+                            <p className="job-description">{item.description}</p>
+                          </div>
+                        )}
+                      </>
+                    ) : (
+                      <p style={{ whiteSpace: 'pre-line' }}>{item.jobDescription.trim()}</p>
+                    )}
                   </div>
                 )}
               </div>

@@ -38,7 +38,9 @@ const Hero = () => {
           </span>
         </div>
         <div className="arlo_tm_button" data-position="center">
-          <a className="anchor" href="#contact">
+          <a className="anchor" href="#contact" style={{
+            borderRadius: "6px"
+          }}>
             <span>{HERO_BUTTON_TEXT}</span>
           </a>
         </div>

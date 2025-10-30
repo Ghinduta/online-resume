@@ -19,14 +19,115 @@
 .accordion .accordion_content{
 	position: relative;
 	overflow: hidden;
-    display: flex;
-    padding: 18px 40px 20px 40px;
-    align-items: center;
+    display: block;
+    padding: 30px 40px 35px 40px;
     background-color: var(--purple-color);
-    cursor: pointer;
+    border-radius: 6px;
+    margin-bottom: 15px;
 }
 .accordion .accordion_content p{
 	color: #ddd;
+}
+
+/* Job sections styling */
+.job-section {
+	margin-bottom: 25px;
+}
+.job-section:last-child {
+	margin-bottom: 0;
+}
+
+.section-title {
+	font-size: 16px;
+	font-weight: 700;
+	color: var(--yellow-color);
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	margin-bottom: 15px;
+	font-family: var(--font-family-poppins);
+}
+
+.skill-group {
+	margin-bottom: 20px;
+}
+
+.skill-group:last-child {
+	margin-bottom: 0;
+}
+
+.skill-category {
+	font-size: 14px;
+	font-weight: 600;
+	color: #fff;
+	margin-bottom: 10px;
+	font-family: var(--font-family-poppins);
+}
+
+.responsibility-group {
+	margin-bottom: 20px;
+}
+
+.responsibility-group:last-child {
+	margin-bottom: 0;
+}
+
+.responsibility-category {
+	font-size: 15px;
+	font-weight: 600;
+	color: #fff;
+	margin-bottom: 10px;
+	font-family: var(--font-family-poppins);
+}
+
+.responsibilities-list {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.responsibilities-list li {
+	color: #ddd;
+	line-height: 1.8;
+	margin-bottom: 12px;
+	padding-left: 20px;
+	position: relative;
+}
+
+.responsibilities-list li:before {
+	content: '▸';
+	position: absolute;
+	left: 0;
+	color: var(--yellow-color);
+	font-weight: bold;
+}
+
+.tech-stack {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+}
+
+.tech-badge {
+	display: inline-block;
+	padding: 6px 14px;
+	background-color: rgba(255, 255, 255, 0.1);
+	color: #fff;
+	font-size: 13px;
+	font-weight: 500;
+	border-radius: 6px;
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	transition: all 0.2s ease;
+}
+
+.tech-badge:hover {
+	background-color: rgba(255, 255, 255, 0.15);
+	border-color: var(--yellow-color);
+}
+
+.job-description {
+	color: #ddd;
+	line-height: 1.7;
+	font-size: 15px;
 }
 .accordion .accordion_content{
 	/* display: none; */
@@ -101,4 +202,5 @@
     background-color: var(--purple-color);
     margin-bottom: 15px;
     cursor: pointer;
+    border-radius: 6px;
 }
