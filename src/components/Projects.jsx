@@ -2,31 +2,41 @@ import React from "react";
 
 const newsItems = [
   {
+    date: "2015",
+    sortDate: "2015-06-01",
+    category: "Research Projects",
+    title: "Bachelor's thesis",
+    link: "https://drive.google.com/file/d/1iwnmS3eBCoeLfJlNCFY8upSSXVLJYJzL/view",
+  },
+  {
+    date: "2019",
+    sortDate: "2019-09-01",
+    category: "Research Projects",
+    title: "Master's thesis",
+    link: "https://drive.google.com/file/d/15db9vlwC6bNzFw7Uhmo8c7DFs6env1wf/view",
+  },
+  {
     date: "2025",
-    category: "Build React app | Web",
+    sortDate: "2025-01-01",
+    category: "Family Projects | Web",
     title: "Online invitation",
     link: "https://ghinduta.github.io/family-invite-2/#",
-    thumb: "img/thumbs/4-3.jpg",
-    image: "img/news/1.jpg",
   },
   {
     date: "2025",
-    category: "Family Projects | Web",
+    sortDate: "2025-01-15",
+    category: "Family Projects | Web & Mobile",
     title: "Parenting millestones",
     link:"https://parentpace.org/",
-    thumb: "img/thumbs/4-3.jpg",
-    image: "img/news/2.jpg",
   },
   {
-    date: "Oct 20, 2024",
-    category: "Learn modern React Course",
-    link:"https://coruscating-begonia-7585b0.netlify.app/",
-    category_link: "https://www.udemy.com/course/react-front-to-back-2022/",
-    title: "Building a feedback app",
-    thumb: "img/thumbs/4-3.jpg",
-    image: "img/news/3.jpg",
+    date: "...",
+    sortDate: "2012-10-20",
+    category: "Others",
+    link:"https://github.com/Ghinduta",
+    title: "See more on Github",
   }
-];
+].sort((a, b) => new Date(b.sortDate) - new Date(a.sortDate));
 
 const News = () => (
   <div className="arlo_tm_section" id="portfolio">

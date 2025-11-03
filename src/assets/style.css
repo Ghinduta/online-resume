@@ -900,6 +900,24 @@ body.resize .arlo_tm_mainpart{
 	float: left;
 	padding: 140px 0px 100px 0px;
 }
+.education_category{
+	width: 100%;
+	margin-bottom: 60px;
+}
+.education_category:last-child{
+	margin-bottom: 0;
+}
+.education_category_title{
+	font-size: 16px;
+	font-weight: 600;
+	color: var(--text-dark);
+	margin-bottom: 2px;
+	padding-bottom: 8px;
+	border-bottom: 1px solid var(--border-light);
+	font-family: var(--font-family-poppins);
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
 .arlo_tm_services .service_list{
 	width: 100%;
 	height: auto;
@@ -930,7 +948,7 @@ body.resize .arlo_tm_mainpart{
 	float: left;
 	position: relative;
 	box-shadow: 0px 0px 30px rgba(0,0,0,.12);
-	padding: 40px 30px 35px 30px;
+	padding: 20px 15px 15px 15px;
 	overflow: hidden;
 	border-radius: 6px;
 }
@@ -956,11 +974,11 @@ body.resize .arlo_tm_mainpart{
 .arlo_tm_services .service_list .icon{
 	display: inline-block;
 	position: relative;
-	width: 80px;
-	height: 80px;
+	width: 60px;
+	height: 60px;
 	border-radius: 100%;
 	background-color: var(--purple-color);
-	margin-bottom: 27px;
+	margin-bottom: 18px;
 
 	-webkit-transition: all .3s ease;
 	   -moz-transition: all .3s ease;
@@ -969,8 +987,8 @@ body.resize .arlo_tm_mainpart{
 	        transition: all .3s ease;
 }
 .arlo_tm_services .service_list .svg{
-	width: 40px;
-	height: 40px;
+	width: 30px;
+	height: 30px;
 	color: var(--yellow-color);
 	position: absolute;
 	top: 50%;

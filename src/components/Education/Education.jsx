@@ -25,6 +25,7 @@ const Education = () => {
     interval: "Issued Jan 2023",
     sortDate: "2023-01-01",
     label: "Online",
+    certificateUrl: "https://www.codecademy.com/profiles/anaGhindariu9183074464/certificates/95dd3ed417d7d6c449afffc6401b310a",
     description: `<h6>Codecademy</h6> <i>Issued Jan 2023</i>
       <p>
       You can view the certificate <a href="https://www.codecademy.com/profiles/anaGhindariu9183074464/certificates/95dd3ed417d7d6c449afffc6401b310a" target="_blank" rel="noopener noreferrer">here</a>.
@@ -38,6 +39,7 @@ const Education = () => {
     interval: "2016-2019",
     sortDate: "2019-09-01",
     label: "On-campus",
+    certificateUrl: "https://drive.google.com/file/d/15db9vlwC6bNzFw7Uhmo8c7DFs6env1wf/view?usp=sharing",
     description: `
     <h6>Master's Thesis - Babeș-Bolyai University, Cluj-Napoca (September 2021)</h6>
     <p>
@@ -58,6 +60,7 @@ const Education = () => {
     interval: "Issued Jun 2021",
     sortDate: "2021-06-01",
     label: "Online",
+    certificateUrl: "https://www.coursera.org/account/accomplishments/verify/9DF5AYDZ4YVK",
     description: `<h6>Coursera</h6> <i>Issued Jun 2021</i>
       <p>
       You can view the certificate <a href="https://www.coursera.org/account/accomplishments/verify/9DF5AYDZ4YVK" target="_blank" rel="noopener noreferrer">here</a>.
@@ -70,6 +73,7 @@ const Education = () => {
     interval: "Issued Aug 2020",
     sortDate: "2020-08-01",
     label: "Online",
+    certificateUrl: "https://www.coursera.org/account/accomplishments/verify/3G5FNVG7V5FD",
     description: `<h6>Coursera</h6> <i>Issued Aug 2020</i>
       <p>
       You can view the certificate <a href="https://www.coursera.org/account/accomplishments/verify/3G5FNVG7V5FD" target="_blank" rel="noopener noreferrer">here</a>.
@@ -82,6 +86,7 @@ const Education = () => {
     interval: "Issued Nov 2019",
     sortDate: "2019-11-01",
     label: "Online",
+    certificateUrl: "https://courses.edx.org/certificates/b1d2e031f1404475ba312b95dbc26a68",
     description: `<h6>Massachusetts Institute of Technology</h6> <i>Issued Nov 2019</i>
       <p>
       You can view the certificate <a href="https://courses.edx.org/certificates/b1d2e031f1404475ba312b95dbc26a68" target="_blank" rel="noopener noreferrer">here</a>.
@@ -94,6 +99,7 @@ const Education = () => {
     interval: "Issued Jul 2019",
     sortDate: "2019-07-01",
     label: "Online",
+    certificateUrl: "https://www.coursera.org/account/accomplishments/verify/DTJ88Q6B4QPP",
     description: `<h6>Coursera</h6> <i>Issued Jul 2019</i>
       <p>
       You can view the certificate <a href="https://www.coursera.org/account/accomplishments/verify/DTJ88Q6B4QPP" target="_blank" rel="noopener noreferrer">here</a>.
@@ -106,6 +112,7 @@ const Education = () => {
     interval: "Issued Apr 2019",
     sortDate: "2019-04-01",
     label: "Online",
+    certificateUrl: "https://www.coursera.org/account/accomplishments/verify/RQ4572J4S25B",
     description: `<h6>Coursera</h6> <i>Issued Apr 2019</i>
       <p>
       You can view the certificate <a href="https://www.coursera.org/account/accomplishments/verify/RQ4572J4S25B" target="_blank">here</a>.
@@ -119,6 +126,7 @@ const Education = () => {
     interval: "2012-2015",
     sortDate: "2015-06-01",
     label: "On-campus",
+    certificateUrl: "https://drive.google.com/file/d/1iwnmS3eBCoeLfJlNCFY8upSSXVLJYJzL/view?usp=sharing",
     description: `
     <h6>Bachelor's Thesis - Babeș-Bolyai University, Cluj-Napoca (June 2019)</h6>
     <p>
@@ -134,7 +142,11 @@ const Education = () => {
   }
 ];
 
-const sortedServices = services.sort(
+const onCampusEducation = services.filter(s => s.label === "On-campus").sort(
+  (a, b) => new Date(b.sortDate) - new Date(a.sortDate)
+);
+
+const onlineEducation = services.filter(s => s.label === "Online").sort(
   (a, b) => new Date(b.sortDate) - new Date(a.sortDate)
 );
 
@@ -144,22 +156,59 @@ const sortedServices = services.sort(
         <div className="container">
           <div className="arlo_tm_main_title">
             <span>Education</span>
-            <h3>My Academic Journey</h3>
           </div>
-          <div className="service_list">
-            <ul>
-              {sortedServices.map((service, idx) => (
+
+          {/* On-Campus Education */}
+          <div className="education_category">
+            <h4 className="education_category_title">On-Campus Education</h4>
+            <div className="service_list">
+              <ul>
+                {onCampusEducation.map((service, idx) => (
+                  <li key={idx}>
+                    <div className="list_inner" onClick={() => {
+                      console.log("Clicked service:", service);
+                      setSelectedService(service);
+                    }}>
+                      <div className="in">
+                        <span className="icon">
+                          <FontAwesomeIcon icon={service.icon} size="lg" className="svg" />
+                        </span>
+                        <h3 className="title">{service.title}</h3>
+
+                        {service.uni && <p className="text"><strong>{service.uni}</strong></p>}
+                        {service.level && <p className="text">{service.level}</p>}
+                        {service.interval && <p className="text">{service.interval}</p>}
+                        {service.label && (
+                          <span className={`label ${service.label === "Online" ? "online" : "on-campus"}`}>
+                            {service.label}
+                          </span>
+                        )}
+                      </div>
+                      <a className="arlo_tm_full_link" href="#" onClick={(e) => e.preventDefault()}></a>
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+
+          {/* Online Education */}
+          <div className="education_category">
+            <h4 className="education_category_title">Online Courses & Certifications</h4>
+            <div className="service_list">
+              <ul>
+                {onlineEducation.map((service, idx) => (
                 <li key={idx}>
                   <div className="list_inner" onClick={() => {
-  console.log("Clicked service:", service);
-  setSelectedService(service);
-}}>
+                    console.log("Clicked service:", service);
+                    setSelectedService(service);
+                  }}>
                     <div className="in">
                       <span className="icon">
                         <FontAwesomeIcon icon={service.icon} size="lg" className="svg" />
                       </span>
                       <h3 className="title">{service.title}</h3>
-                      
+
                       {service.uni && <p className="text"><strong>{service.uni}</strong></p>}
                       {service.level && <p className="text">{service.level}</p>}
                       {service.interval && <p className="text">{service.interval}</p>}
@@ -176,9 +225,8 @@ const sortedServices = services.sort(
             </ul>
           </div>
         </div>
-      </div>
 
-    {selectedService && (
+        {selectedService && (
   <div className="description_wrap" onClick={() => setSelectedService(null)}>
     <div className="service_popup_informations" onClick={(e) => e.stopPropagation()}>
       <div className="close">
@@ -212,7 +260,8 @@ const sortedServices = services.sort(
     </div>
   </div>
 )}
-
+        </div>
+      </div>
     </section>
   );
 };
