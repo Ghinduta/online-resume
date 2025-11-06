@@ -22,7 +22,6 @@ const jobData = [
       {
         category: "Legacy System ",
         items: [
-          "Contributed as an engineering member and liaison between processing, development, and QA teams",
           "Expanded frameworks for single-cell data analysis, developing storage infrastructure and visualization components for large datasets",
           "Integrated bioinformatics tools into cloud-based pipelines and restructured AWS components",
           "Laid the groundwork for unit testing, automated integration pipelines, and CI pipelines; monitored cloud and on-premise infrastructure"

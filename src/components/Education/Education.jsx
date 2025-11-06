@@ -178,6 +178,7 @@ const onlineEducation = services.filter(s => s.label === "Online").sort(
                         {service.uni && <p className="text"><strong>{service.uni}</strong></p>}
                         {service.level && <p className="text">{service.level}</p>}
                         {service.interval && <p className="text">{service.interval}</p>}
+                        {service.summary && <p className="text summary">{service.summary}</p>}
                         {service.label && (
                           <span className={`label ${service.label === "Online" ? "online" : "on-campus"}`}>
                             {service.label}
@@ -212,6 +213,7 @@ const onlineEducation = services.filter(s => s.label === "Online").sort(
                       {service.uni && <p className="text"><strong>{service.uni}</strong></p>}
                       {service.level && <p className="text">{service.level}</p>}
                       {service.interval && <p className="text">{service.interval}</p>}
+                      {service.summary && <p className="text summary">{service.summary}</p>}
                       {service.label && (
                         <span className={`label ${service.label === "Online" ? "online" : "on-campus"}`}>
                           {service.label}
