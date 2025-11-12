@@ -47,23 +47,38 @@ const jobData = [
   },
   {
     jobTitle: "NET Software Developer and Co-founder, RiseTech (Sep. 2017 – Feb. 2019)",
-    jobDescription: `
-      Primarily focused on technical processes while also actively engaging with clients to provide business analysis, solution design, and support for their digital solutions.
-
-      Developed and oversaw the architecture of RaBit, a product aimed at small and medium-sized companies to facilitate objective-focused management. Managed project delivery and quality control while contributing to technical and UI/UX vision.
-
-      Other projects included developing a custom ERP warehouse management tool using Asp.Net Web API and Android mobile solutions, as well as an online consulting platform.
-    `,
+    techStack: [
+      "ASP.NET MVC",
+      "Honeywell Mobility Edge Android",
+      "SQL Server",
+      "NUnit",
+      "Moq"
+    ],
+    responsibilities: [
+      "Primarily focused on technical processes while also actively engaging with clients to provide business analysis, solution design, and support for their digital solutions",
+      "Developed and oversaw the architecture of RaBit, a product aimed at small and medium-sized companies to facilitate objective-focused management. Managed project delivery and quality control while contributing to technical and UI/UX vision",
+      "Other projects included developing a custom ERP warehouse management tool using Asp.Net Web API and Android mobile solutions, as well as an online consulting platform"
+    ]
   },
   {
     jobTitle: "Software Developer, Pitech+Plus (Sep 2017 - May 2019)",
-    jobDescription: `
-      Managed and supported various .NET projects (ASP.NET MVC, ASP.NET/CORE WEBAPI, and Xamarin).
-
-      Designed and maintained SQL Server databases. Developed front-end and back-end features, analyzed code, and performed unit testing using NUnit and Moq.
-
-      Documented applications and conducted Xamarin-Forms and Xamarin-Android workshops.
-    `,
+    techStack: [
+      "ASP.NET MVC",
+      "ASP.NET Core Web API",
+      "Xamarin",
+      "Xamarin.Forms",
+      "Xamarin.Android",
+      "SQL Server",
+      "NUnit",
+      "Moq",
+      ".NET"
+    ],
+    responsibilities: [
+      "Managed and supported various .NET projects (ASP.NET MVC, ASP.NET/CORE WEBAPI, and Xamarin)",
+      "Designed and maintained SQL Server databases",
+      "Developed front-end and back-end features, analyzed code, and performed unit testing using NUnit and Moq",
+      "Documented applications and conducted Xamarin-Forms and Xamarin-Android workshops"
+    ]
   },
 ];
 
