@@ -241,6 +241,63 @@
             line-height: 1.4;
         }
 
+        /* Courses - Compact Layout */
+        .course-item {
+            margin-bottom: 6px;
+            font-size: 9.5pt;
+            line-height: 1.4;
+        }
+
+        .course-title {
+            font-weight: 600;
+            color: #1e293b;
+        }
+
+        .course-meta {
+            color: #64748b;
+            font-size: 9pt;
+        }
+
+        /* Portfolio */
+        .portfolio-item {
+            margin-bottom: 12px;
+            page-break-inside: avoid;
+        }
+
+        .portfolio-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 3px;
+        }
+
+        .portfolio-title {
+            font-size: 10pt;
+            font-weight: 700;
+            color: #1e293b;
+        }
+
+        .portfolio-title a {
+            color: #3b82f6;
+            text-decoration: none;
+        }
+
+        .portfolio-title a:hover {
+            text-decoration: underline;
+        }
+
+        .portfolio-category {
+            font-size: 8.5pt;
+            color: #64748b;
+            font-style: italic;
+        }
+
+        .portfolio-description {
+            font-size: 9pt;
+            color: #475569;
+            line-height: 1.4;
+        }
+
         /* Print styles */
         @media print {
             body {
@@ -476,7 +533,7 @@
                 </div>
                 <div class="education-institution">Babeș-Bolyai University, Cluj-Napoca</div>
                 <div class="education-type">On-campus</div>
-                <div class="education-thesis">Thesis: Deep learning models for genomic prediction with focus on transcription factor context specificity</div>
+                <div class="education-thesis">Thesis: Applied AI/ML to noisy, highly imbalanced biological sequences for transcription factor binding prediction, designing robust hard-negative sets and context-aware deep learning models.</div>
             </div>
 
             <div class="education-item">
@@ -486,61 +543,69 @@
                 </div>
                 <div class="education-institution">Babeș-Bolyai University, Cluj-Napoca</div>
                 <div class="education-type">On-campus</div>
-                <div class="education-thesis">Thesis: Augmented Reality system for motorcyclists with GPS navigation and safety features</div>
+                <div class="education-thesis">Thesis: Developed an augmented reality motorcycle helmet system with a companion Android app, providing real-time navigation, alerts, and contextual data to enhance rider safety and situational awareness.</div>
+            </div>
+        </div>
+
+        <!-- Courses -->
+        <div class="section">
+            <h2 class="section-title">Courses</h2>
+            <div class="course-item">
+                <span class="course-title">Learn Data Analysis with Pandas</span> • <span class="course-meta">Codecademy, Jan 2023</span>
+            </div>
+            <div class="course-item">
+                <span class="course-title">Neural Networks and Deep Learning</span> • <span class="course-meta">Coursera (DeepLearning.AI), Jun 2021</span>
+            </div>
+            <div class="course-item">
+                <span class="course-title">Genome Sequencing (Bioinformatics II)</span> • <span class="course-meta">Coursera (UC San Diego), Aug 2020</span>
+            </div>
+            <div class="course-item">
+                <span class="course-title">Introduction to Biology</span> • <span class="course-meta">MIT (via edX), Nov 2019</span>
+            </div>
+            <div class="course-item">
+                <span class="course-title">Finding Hidden Messages in DNA</span> • <span class="course-meta">Coursera (UC San Diego), Jul 2019</span>
+            </div>
+            <div class="course-item">
+                <span class="course-title">Biology Meets Programming</span> • <span class="course-meta">Coursera, Apr 2019</span>
+            </div>
+        </div>
+
+        <!-- Personal Portfolio -->
+        <div class="section">
+            <h2 class="section-title">Personal Portfolio</h2>
+
+            <div class="portfolio-item">
+                <div class="portfolio-header">
+                    <div class="portfolio-title">
+                        <a href="https://github.com/Ghinduta/support-docs" target="_blank">Stack Overflow RAG Assistant</a>
+                    </div>
+                    <div class="portfolio-category">Personal Projects | AI & RAG</div>
+                </div>
+                <div class="portfolio-description">A lightweight .NET 8 RAG service that transforms Stack Overflow data into a grounded Q&A assistant with streaming answers, citations and tag suggestions</div>
             </div>
 
-            <div class="education-item">
-                <div class="education-header">
-                    <div class="education-title">Learn Data Analysis with Pandas</div>
-                    <div class="education-date">Jan 2023</div>
+            <div class="portfolio-item">
+                <div class="portfolio-header">
+                    <div class="portfolio-title">
+                        <a href="https://github.com/Ghinduta/ai-budgeting-coach" target="_blank">AI Budgeting Coach</a>
+                    </div>
+                    <div class="portfolio-category">Personal Projects | Web & AI</div>
                 </div>
-                <div class="education-institution">Codecademy</div>
-                <div class="education-type">Online</div>
+                <div class="portfolio-description">A full‑stack React + TypeScript personal finance app with a .NET 8 microservices backend (PostgreSQL, RabbitMQ) using AI to auto-categorize transactions, track budgets, and provide real-time financial insights.</div>
             </div>
 
-            <div class="education-item">
-                <div class="education-header">
-                    <div class="education-title">Neural Networks and Deep Learning</div>
-                    <div class="education-date">Jun 2021</div>
+            <div class="portfolio-item">
+                <div class="portfolio-header">
+                    <div class="portfolio-title">
+                        <a href="https://github.com/nickerman/Parent-Pace" target="_blank">Parenting Milestones</a>
+                    </div>
+                    <div class="portfolio-category">Family Projects | Web & Mobile</div>
                 </div>
-                <div class="education-institution">Coursera (DeepLearning.AI)</div>
-                <div class="education-type">Online</div>
+                <div class="portfolio-description">A React-based parenting app delivering AI-curated, research-backed tips and insights for parents. (<a href="https://parentpace.org" target="_blank">parentpace.org</a>)</div>
             </div>
 
-            <div class="education-item">
-                <div class="education-header">
-                    <div class="education-title">Genome Sequencing (Bioinformatics II)</div>
-                    <div class="education-date">Aug 2020</div>
-                </div>
-                <div class="education-institution">Coursera (University of California San Diego)</div>
-                <div class="education-type">Online</div>
-            </div>
-
-            <div class="education-item">
-                <div class="education-header">
-                    <div class="education-title">Introduction to Biology</div>
-                    <div class="education-date">Nov 2019</div>
-                </div>
-                <div class="education-institution">MIT (via edX)</div>
-                <div class="education-type">Online</div>
-            </div>
-
-            <div class="education-item">
-                <div class="education-header">
-                    <div class="education-title">Finding Hidden Messages in DNA</div>
-                    <div class="education-date">Jul 2019</div>
-                </div>
-                <div class="education-institution">Coursera (University of California San Diego)</div>
-                <div class="education-type">Online</div>
-            </div>
-
-            <div class="education-item">
-                <div class="education-header">
-                    <div class="education-title">Biology Meets Programming</div>
-                    <div class="education-date">Apr 2019</div>
-                </div>
-                <div class="education-institution">Coursera</div>
-                <div class="education-type">Online</div>
+            <div style="margin-top: 15px; font-size: 9.5pt; color: #64748b; font-style: italic;">
+                For more projects and details, visit <a href="https://github.com/Ghinduta" target="_blank" style="color: #3b82f6; text-decoration: none;">github.com/Ghinduta</a>
             </div>
         </div>
     </div>

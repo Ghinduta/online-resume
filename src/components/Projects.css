@@ -1,0 +1,44 @@
+/* Make project cards more compact */
+.arlo_tm_news .news_list .details {
+  padding: 20px 20px 25px 20px !important;
+}
+
+/* Reduce title font size */
+.arlo_tm_news .news_list .title {
+  font-size: 16px !important;
+  margin-bottom: 10px;
+}
+
+/* Reduce meta text size */
+.arlo_tm_news .news_list .meta {
+  padding-bottom: 10px !important;
+  margin-bottom: 15px !important;
+}
+
+.arlo_tm_news .news_list .meta p {
+  font-size: 12px !important;
+}
+
+/* Style the project description */
+.project-description {
+  font-size: 13px !important;
+  line-height: 1.5;
+  color: #666;
+  margin: 0;
+}
+
+/* Style the live link within description */
+.project-description .live-link {
+  color: var(--purple-color);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.project-description .live-link:hover {
+  text-decoration: underline;
+}
+
+/* Reduce bottom margin of cards */
+.arlo_tm_news .news_list ul li {
+  margin-bottom: 30px !important;
+}
