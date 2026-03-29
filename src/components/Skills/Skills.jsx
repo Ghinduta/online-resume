@@ -3,24 +3,24 @@ import "./Skills.css";
 
 const skillsData = [
   {
-    category: "Programming & Frameworks",
-    skills: [".NET Framework", ".NET Core", "C#", "Python", "React", "ASP.NET"]
-  },
-  {
-    category: "Databases & Data",
-    skills: ["PostgreSQL", "SQL Server", "Elasticsearch", "SQLite", "ETL Pipelines", "Redis"]
-  },
-  {
     category: "Cloud & DevOps",
-    skills: ["AWS", "CI/CD", "Docker", "Git"]
+    skills: ["Terraform", "Azure Container Apps", "Azure Functions", "Azure Service Bus", "AWS", "Docker", "CI/CD", "Git"]
+  },
+  {
+    category: "Programming & Frameworks",
+    skills: [".NET 10", "ASP.NET Core", "C#", ".NET Core", ".NET Framework", "Python", "MediatR", "FluentValidation", "Dapr"]
   },
   {
     category: "Practices & Methodologies",
-    skills: ["Agile/Scrum", "Unit Testing", "System Architecture", "Technical Leadership"]
+    skills: ["Microservices", "CQRS", "Event-Driven Architecture", "System Architecture", "Agile/Scrum", "Unit Testing", "Technical Leadership"]
+  },
+  {
+    category: "Databases & Data",
+    skills: ["Cosmos DB", "Redis", "PostgreSQL", "Elasticsearch", "SQL Server", "SQLite", "ETL Pipelines"]
   },
   {
     category: "AI & Intelligent Systems",
-    skills: ["Prompt Engineering", "AI-assisted Content Curation", "Agentic AI Workflows"]
+    skills: ["AI-Assisted Development", "Claude Code", "Prompt Engineering", "AI Governance", "Agentic AI Workflows"]
   }
 ];
 

@@ -3,6 +3,43 @@ import './JobHistory.css'; // Optional: your styles
 
 const jobData = [
   {
+    jobTitle: "Senior Software Engineer (Contract), Discount Ninja (Jan 2026 – Present)",
+    techStack: [
+      ".NET 10",
+      "ASP.NET Core",
+      "Azure Functions",
+      "Cosmos DB",
+      "Azure Service Bus",
+      "Dapr",
+      "MediatR",
+      "Terraform",
+      "Azure Container Apps",
+      "Redis",
+      "Docker",
+      "Claude Code",
+      "CI/CD"
+    ],
+    responsibilities: [
+      {
+        category: "Microservices & Architecture",
+        items: [
+          "Contributed to and extended bounded-context microservices, webhook handlers, and event processors on Azure Container Apps — working within a CQRS architecture with event-driven communication via Dapr pub/sub, multi-tenant Cosmos DB data layers, idempotent event handling, and transactional editor workflows",
+          "Prepared and maintained test and production environments, including infrastructure provisioning and deployment pipelines"
+        ]
+      },
+      {
+        category: "AI-Augmented Development",
+        items: [
+          "Built and continuously refined a structured AI-assisted development workflow using Claude Code with custom commands — iterating on the process with each feature cycle",
+          "Authored project-level AI governance documentation codifying architectural rules and domain constraints for consistent AI-generated code"
+        ]
+      }
+    ],
+    description: [
+      "Discount Ninja V6 is a production SaaS platform for Shopify merchants to manage promotional campaigns, widgets, and analytics. I contribute to the backend and infrastructure of this multi-service architecture, helping stabilize the application and prepare it for production release, while pioneering an AI-augmented development workflow with custom commands and architectural guardrails."
+    ]
+  },
+  {
     jobTitle: "Senior Software Engineer, Qiagen (May 2019 – Present)",
     techStack: [
       ".NET Framework",
@@ -20,20 +57,20 @@ const jobData = [
     ],
     responsibilities: [
       {
-        category: "Legacy System ",
+        category: "Legacy System Modernization",
         items: [
-          "Expanded frameworks for single-cell data analysis, developing storage infrastructure and visualization components for large datasets",
-          "Integrated bioinformatics tools into cloud-based pipelines and restructured AWS components",
-          "Laid the groundwork for unit testing, automated integration pipelines, and CI pipelines; monitored cloud and on-premise infrastructure"
+          "Owned and extended the single-cell data analysis framework, designing storage infrastructure and visualization components for large-scale genomic datasets",
+          "Drove integration of bioinformatics tools into cloud-based pipelines and led the restructuring of AWS components",
+          "Established the project's first unit testing and CI pipeline infrastructure; managed monitoring across cloud and on-premise deployments"
         ]
       },
       {
         category: "Greenfield Projects",
         items: [
-          "Designed and delivered two new systems, including an MVP that evolved into a full solution, while migrating core functionalities from legacy monoliths",
-          "Built Elasticsearch-based data interrogation and ETL pipelines for data migration and transformation",
+          "Drove technical direction for two new products, including an MVP that evolved into a full solution, while migrating core functionalities from a legacy monolith",
+          "Designed Elasticsearch-based data interrogation and ETL pipelines for large-scale data migration and transformation",
           "Implemented caching mechanisms to improve performance and ensured accurate content version tracking",
-          "Led requirement gathering, translated business needs into technical design, facilitated Scrum ceremonies, and coordinated across development, QA, and product teams"
+          "Coordinated across development, QA, and product teams — leading requirement gathering, translating business needs into technical design, and facilitating Scrum ceremonies"
         ]
       }
     ],
@@ -46,7 +83,7 @@ const jobData = [
     ]
   },
   {
-    jobTitle: "NET Software Developer and Co-founder, RiseTech (Sep. 2017 – Feb. 2019)",
+    jobTitle: ".NET Software Developer and Co-founder, RiseTech (Sep 2017 – May 2019)",
     techStack: [
       "ASP.NET MVC",
       "Honeywell Mobility Edge Android",
@@ -61,7 +98,7 @@ const jobData = [
     ]
   },
   {
-    jobTitle: "Software Developer, Pitech+Plus (Sep 2017 - May 2019)",
+    jobTitle: "Software Developer, Pitech+Plus (Apr 2015 – Jul 2017)",
     techStack: [
       "ASP.NET MVC",
       "ASP.NET Core Web API",

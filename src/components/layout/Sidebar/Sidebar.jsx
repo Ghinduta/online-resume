@@ -30,7 +30,7 @@ const Sidebar = () => (
     </nav>
     <div className="copyright">
       <p>
-        &copy; 2025 by Ana
+        &copy; 2026 by Ana
       </p>
     </div>
   </aside>

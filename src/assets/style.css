@@ -504,7 +504,7 @@ body.resize .arlo_tm_sidebar{
 	text-align: center;	
 }
 .arlo_tm_sidebar .logo[data-type="avatar"] + .menu{
-	padding-top: 80px;
+	padding-top: 110px;
 }
 .arlo_tm_sidebar .menu ul{
 	margin: 0px;

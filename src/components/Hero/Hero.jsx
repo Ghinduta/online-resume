@@ -2,9 +2,9 @@ import React from "react";
 import styles from "./Hero.module.css";
 
 const HERO_NAME = "Ana Ghindariu";
-const HERO_TAGLINE = "Senior Software Engineer | .NET Specialist";
-const HERO_INTRO = "I am a senior .NET developer specializing in full-lifecycle software development, from enhancing legacy systems to architecting greenfield projects. My work spans C#, ASP.NET Core, Python, and Elasticsearch, often integrating AI and agentic frameworks to automate and optimize workflows.";
-const KEY_SKILLS = [".NET Core", "C#", "Python", "AWS", "React", "Elasticsearch", "AI Integration"];
+const HERO_TAGLINE = "Senior Software Engineer | .NET & Azure | AI-Augmented Development";
+const HERO_INTRO = "Senior .NET engineer with 10+ years building scalable backend systems — from legacy modernization to cloud-native microservices on Azure. Currently pioneering AI-augmented development workflows to ship faster with higher quality.";
+const KEY_SKILLS = [".NET / C#", "Azure", "Microservices", "CQRS", "Terraform", "AI-Assisted Development"];
 const CV_LINK = "/cv.html";
 
 const Hero = () => {
@@ -24,6 +24,7 @@ const Hero = () => {
                   <span key={idx} className={styles.skillBadge}>{skill}</span>
                 ))}
               </div>
+              <a href="#skills" className={styles.skillsLink}>See full skills breakdown →</a>
             </div>
             <div className={styles.heroButtons}>
               <a className={styles.primaryButton} href="#contact">

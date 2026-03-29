@@ -4,7 +4,7 @@ const aboutData = {
   title: "About",
   heading: "Hi there! I'm Ana!",
   paragraphs: [
-    `I am a senior .NET developer specializing in full-lifecycle software development, from enhancing legacy systems to architecting greenfield projects. My work spans C#, ASP.NET Core, Python, and Elasticsearch, often integrating AI and agentic frameworks to automate and optimize workflows. I also contribute to team organization, acting as a liaison between multiple teams and implementing Scrum practices to drive project efficiency. I focus on building scalable, fault-tolerant systems that are maintainable and high-performing.`,
+    `Senior .NET engineer with 10+ years building scalable backend systems — from legacy modernization to cloud-native microservices on Azure. I focus on clean architecture, event-driven design, and infrastructure automation with Terraform. Currently pioneering AI-augmented development workflows to ship faster with higher quality, while contributing to team organization and cross-team coordination.`,
   ],
   cvLink: "/GhindariuCV.pdf",
   cvText: "Download CV",
