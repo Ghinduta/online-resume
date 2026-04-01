@@ -3,7 +3,7 @@ import styles from "./Hero.module.css";
 
 const HERO_NAME = "Ana Ghindariu";
 const HERO_TAGLINE = "Senior Software Engineer | .NET & Azure | AI-Augmented Development";
-const HERO_INTRO = "Senior .NET engineer with 10+ years building scalable backend systems — from legacy modernization to cloud-native microservices on Azure. Currently pioneering AI-augmented development workflows to ship faster with higher quality.";
+const HERO_INTRO = "Senior .NET engineer with 10+ years designing and building scalable backend systems — from greenfield builds to legacy modernization, across monolithic and cloud-native microservices architectures. Currently pioneering AI-augmented development workflows to ship faster with higher quality, while contributing to team organization and cross-team coordination.";
 const KEY_SKILLS = [".NET / C#", "Azure", "Microservices", "CQRS", "Terraform", "AI-Assisted Development"];
 const CV_LINK = "/cv.html";
 

@@ -4,7 +4,7 @@ const aboutData = {
   title: "About",
   heading: "Hi there! I'm Ana!",
   paragraphs: [
-    `Senior .NET engineer with 10+ years building scalable backend systems — from legacy modernization to cloud-native microservices on Azure. I focus on clean architecture, event-driven design, and infrastructure automation with Terraform. Currently pioneering AI-augmented development workflows to ship faster with higher quality, while contributing to team organization and cross-team coordination.`,
+    `Senior .NET engineer with 10+ years designing and building scalable backend systems — from greenfield builds to legacy modernization, across monolithic and cloud-native microservices architectures. Currently pioneering AI-augmented development workflows to ship faster with higher quality, while contributing to team organization and cross-team coordination.`,
   ],
   cvLink: "/GhindariuCV.pdf",
   cvText: "Download CV",
