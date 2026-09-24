@@ -25,7 +25,6 @@ const newsItems = [
     title: "Parenting Milestones",
     link:"https://github.com/nickerman/Parent-Pace",
     description: "A React-based parenting app delivering AI-curated, research-backed tips and insights for parents.",
-    liveLink: "https://parentpace.org",
   },
   {
     date: "2025",

@@ -82,6 +82,7 @@ const Education = () => {
     icon: faLeaf,
     title: "Introduction to Biology",
     uni: "MIT",
+    pinned: true,
     interval: "Issued Nov 2019",
     sortDate: "2019-11-01",
     label: "Online",
@@ -146,7 +147,7 @@ const onCampusEducation = services.filter(s => s.label === "On-campus").sort(
 );
 
 const onlineEducation = services.filter(s => s.label === "Online").sort(
-  (a, b) => new Date(b.sortDate) - new Date(a.sortDate)
+  (a, b) => (b.pinned ? 1 : 0) - (a.pinned ? 1 : 0) || new Date(b.sortDate) - new Date(a.sortDate)
 );
 
   return (
@@ -192,6 +193,7 @@ const onlineEducation = services.filter(s => s.label === "Online").sort(
           {/* Online Education */}
           <div className="education_category">
             <h4 className="education_category_title">Online Courses & Certifications</h4>
+            <p className="education_track">Biology track: MIT Introduction to Biology · Genome Sequencing (Bioinformatics II) · Finding Hidden Messages in DNA · ML master's thesis on transcription-factor binding</p>
             <div className="service_list">
               <ul>
                 {onlineEducation.map((service, idx) => (

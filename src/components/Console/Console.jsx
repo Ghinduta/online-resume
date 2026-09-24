@@ -9,9 +9,11 @@ const EMAIL = "ana.ghindariu@gmail.com";
 const LINKEDIN = "https://www.linkedin.com/in/ghindariu-ana-821a22137/";
 const GITHUB = "https://github.com/Ghinduta";
 
+const THESIS_URL = "https://drive.google.com/file/d/15db9vlwC6bNzFw7Uhmo8c7DFs6env1wf/view?usp=sharing";
+const MIT_BIOLOGY_CERT = "https://courses.edx.org/certificates/b1d2e031f1404475ba312b95dbc26a68";
 const stats = [
   { value: "10+", label: "years building .NET backends" },
-  { value: "7 yrs", label: "building genomics & drug-discovery data platforms" },
+  { value: "7 yrs", label: <>building genomics & drug-discovery data platforms, plus a <a href={THESIS_URL} target="_blank" rel="noopener noreferrer">genomics-ML thesis</a> & <a href={MIT_BIOLOGY_CERT} target="_blank" rel="noopener noreferrer">MIT online biology coursework</a></> },
   { value: "50%+", label: "cloud costs cut via right-sizing & scale-to-zero" },
   { value: "Idea → prod", label: "hackathon PoC I pitched became today's product; took a SaaS platform to launch" },
   { value: "AI-native", label: "agents, skills, hooks & spec-driven development in daily delivery" },
@@ -59,9 +61,9 @@ const projects = [
   {
     kind: "Family · Web & Mobile",
     title: "ParentPace",
-    desc: "A React parenting app delivering AI-curated, research-backed tips and milestones for parents. Live at parentpace.org.",
+    desc: "A React parenting app delivering AI-curated, research-backed tips and milestones for parents.",
     stack: "React · AI",
-    link: "https://parentpace.org",
+    link: "https://github.com/nickerman/Parent-Pace",
   },
 ];
 
@@ -70,7 +72,25 @@ const education = [
   { years: "2012 – 2015", degree: "BSc Computer Science", school: "Babeș-Bolyai University, Cluj-Napoca" },
 ];
 
-const courses = ["Neural Networks and Deep Learning", "Genome Sequencing (Bioinformatics II)", "Learn Data Analysis with Pandas"];
+// Each links to its certificate (or the thesis PDF), same URLs as Education.jsx.
+const biologyTrack = [
+  { name: "Introduction to Biology — MIT (edX)", url: MIT_BIOLOGY_CERT },
+  { name: "Genome Sequencing (Bioinformatics II)", url: "https://www.coursera.org/account/accomplishments/verify/3G5FNVG7V5FD" },
+  { name: "Finding Hidden Messages in DNA", url: "https://www.coursera.org/account/accomplishments/verify/DTJ88Q6B4QPP" },
+  { name: "ML master's thesis on transcription-factor binding", url: THESIS_URL },
+];
+
+const courses = [
+  { name: "Neural Networks and Deep Learning", url: "https://www.coursera.org/account/accomplishments/verify/9DF5AYDZ4YVK" },
+  { name: "Learn Data Analysis with Pandas", url: "https://www.codecademy.com/profiles/anaGhindariu9183074464/certificates/95dd3ed417d7d6c449afffc6401b310a" },
+];
+
+const LinkList = ({ items }) => items.map((c, i) => (
+  <React.Fragment key={c.name}>
+    {i > 0 && " · "}
+    <a href={c.url} target="_blank" rel="noopener noreferrer">{c.name}</a>
+  </React.Fragment>
+));
 
 const JobDetails = ({ responsibilities = [] }) => {
   if (responsibilities.length === 0) return null;
@@ -164,7 +184,7 @@ const Console = () => (
 
       <section className={styles.stats}>
         {stats.map((s) => (
-          <div key={s.label} className={styles.stat}>
+          <div key={s.value} className={styles.stat}>
             <div className={styles.statValue}>{s.value}</div>
             <div className={styles.statLabel}>{s.label}</div>
           </div>
@@ -252,8 +272,12 @@ const Console = () => (
             </div>
           ))}
           <div className={styles.eduRow}>
+            <span className={styles.eduYears}>biology track</span>
+            <span className={styles.eduCourses}><LinkList items={biologyTrack} /></span>
+          </div>
+          <div className={styles.eduRow}>
             <span className={styles.eduYears}>courses</span>
-            <span className={styles.eduCourses}>{courses.join(" · ")}</span>
+            <span className={styles.eduCourses}><LinkList items={courses} /></span>
           </div>
         </div>
       </section>

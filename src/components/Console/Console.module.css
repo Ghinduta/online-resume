@@ -549,6 +549,11 @@
 	color: var(--text-body);
 }
 
+.statLabel a,
+.eduCourses a {
+	color: var(--accent);
+}
+
 /* Contact */
 .contact {
 	max-width: 1280px;

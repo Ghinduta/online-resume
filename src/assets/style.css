@@ -907,6 +907,10 @@ body.resize .arlo_tm_mainpart{
 .education_category:last-child{
 	margin-bottom: 0;
 }
+.education_track{
+	font-size: 14px;
+	margin: 0 0 16px;
+}
 .education_category_title{
 	font-size: 16px;
 	font-weight: 600;
