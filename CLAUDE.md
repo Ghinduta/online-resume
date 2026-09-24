@@ -31,8 +31,10 @@ There is no test framework.
 
 ```bash
 "/c/Program Files/Google/Chrome/Application/chrome.exe" --headless=new --disable-gpu --no-pdf-header-footer \
-  --virtual-time-budget=5000 --print-to-pdf="public/GhindariuCV.pdf" http://localhost:5173/cv.html
+  --virtual-time-budget=5000 --print-to-pdf="$(pwd -W)/public/GhindariuCV.pdf" http://localhost:5173/cv.html
 ```
+
+Run it from the repo root and use the absolute path as shown — a relative `--print-to-pdf` path can silently write nothing. Confirm Chrome prints "bytes written" and the file's timestamp changed.
 
 Then open the PDF and check the page breaks (no near-empty pages, no split job headers, no orphaned lines) before finishing.
 

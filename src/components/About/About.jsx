@@ -4,7 +4,7 @@ const aboutData = {
   title: "About",
   heading: "Hi there! I'm Ana!",
   paragraphs: [
-    `Senior .NET engineer with 10+ years designing and building scalable backend systems — from greenfield builds to legacy modernization, across monolithic and cloud-native microservices architectures. Currently pioneering AI-augmented development workflows to ship faster with higher quality, while contributing to team organization and cross-team coordination.`,
+    `Senior .NET engineer with 10+ years turning early-stage and legacy backends into production-ready systems on Azure and AWS, with reliable integrations, clean data and sensible cloud bills. My latest engagement added a team-wide move to guarded, spec-driven, AI-assisted delivery that ships faster without lowering the bar, alongside team organization and cross-team coordination.`,
   ],
   cvLink: "/GhindariuCV.pdf",
   cvText: "Download CV",
