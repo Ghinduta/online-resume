@@ -1,123 +1,7 @@
 import React, { useState } from 'react';
 import './JobHistory.css'; // Optional: your styles
+import { jobData } from './jobData';
 
-const jobData = [
-  {
-    jobTitle: "Senior Software Engineer (Contract), Discount Ninja (Jan 2026 – Present)",
-    techStack: [
-      ".NET 10",
-      "ASP.NET Core",
-      "Azure Functions",
-      "Cosmos DB",
-      "Azure Service Bus",
-      "Dapr",
-      "MediatR",
-      "Terraform",
-      "Azure Container Apps",
-      "Redis",
-      "Docker",
-      "Claude Code",
-      "CI/CD"
-    ],
-    responsibilities: [
-      {
-        category: "Microservices & Architecture",
-        items: [
-          "Contributed to and extended bounded-context microservices, webhook handlers, and event processors on Azure Container Apps — working within a CQRS architecture with event-driven communication via Dapr pub/sub, multi-tenant Cosmos DB data layers, idempotent event handling, and transactional editor workflows",
-          "Prepared and maintained test and production environments, including infrastructure provisioning and deployment pipelines"
-        ]
-      },
-      {
-        category: "AI-Augmented Development",
-        items: [
-          "Built and continuously refined a structured AI-assisted development workflow using Claude Code with custom commands — iterating on the process with each feature cycle",
-          "Authored project-level AI governance documentation codifying architectural rules and domain constraints for consistent AI-generated code"
-        ]
-      }
-    ],
-    description: [
-      "Discount Ninja V6 is a production SaaS platform for Shopify merchants to manage promotional campaigns, widgets, and analytics. I contribute to the backend and infrastructure of this multi-service architecture, helping stabilize the application and prepare it for production release, while pioneering an AI-augmented development workflow with custom commands and architectural guardrails."
-    ]
-  },
-  {
-    jobTitle: "Senior Software Engineer, Qiagen (May 2019 – Present)",
-    techStack: [
-      ".NET Framework",
-      ".NET Core",
-      "C#",
-      "Python",
-      "DevExpress",
-      "PostgreSQL",
-      "SQLite",
-      "Elasticsearch",
-      "AWS",
-      "CI/CD",
-      "ETL",
-      "Unit Testing"
-    ],
-    responsibilities: [
-      {
-        category: "Legacy System Modernization",
-        items: [
-          "Owned and extended the single-cell data analysis framework, designing storage infrastructure and visualization components for large-scale genomic datasets",
-          "Drove integration of bioinformatics tools into cloud-based pipelines and led the restructuring of AWS components",
-          "Established the project's first unit testing and CI pipeline infrastructure; managed monitoring across cloud and on-premise deployments"
-        ]
-      },
-      {
-        category: "Greenfield Projects",
-        items: [
-          "Drove technical direction for two new products, including an MVP that evolved into a full solution, while migrating core functionalities from a legacy monolith",
-          "Designed Elasticsearch-based data interrogation and ETL pipelines for large-scale data migration and transformation",
-          "Implemented caching mechanisms to improve performance and ensured accurate content version tracking",
-          "Coordinated across development, QA, and product teams — leading requirement gathering, translating business needs into technical design, and facilitating Scrum ceremonies"
-        ]
-      }
-    ],
-    description: [
-      "Qiagen has been a cornerstone in helping me see how software systems can enable efficient understanding of massive data from numerous sources, leveraging new insights in molecular diagnosis and drug discovery fields. My contribution to Omicsoft, a complete cloud-enabled NGS analytics product, has been as an engineering member, while also an active liaison between the processing, development, and QA teams.",
-      "As a senior software engineer, I worked on expanding the existing framework for single cell data analysis, developing customized storage infrastructure, improving the efficiency of processing solutions, and implementing graphical components to visualize large volumes of data. I also contributed to integrating numerous bioinformatics tools into cloud-based analysis pipelines and restructuring parts of the AWS integration.",
-      "I had the chance to lay the groundwork for unit testing, automated integration pipelines, CI pipelines, and to restructure and monitor the AWS development infrastructure. My experience spans cloud, on-premise, and SaaS deployments, in both Windows and Linux environments.",
-      "Building on this experience, I had the opportunity to design and deliver two greenfield projects, including an MVP that evolved into a full solution, while transitioning core functionalities from a legacy monolith system. I set up Elasticsearch-based data interrogation, designed ETL pipelines for migrating and transforming data, and implemented caching mechanisms to improve performance.",
-      "Working at Qiagen gave me the opportunity to grow my skills in requirement gathering, feature analysis across multidisciplinary teams, architecture and scalability design, system integration, complex solution development, and deployment on multiple operating systems — and, most importantly, to collaborate with a wide variety of talented professionals."
-    ]
-  },
-  {
-    jobTitle: ".NET Software Developer and Co-founder, RiseTech (Sep 2017 – May 2019)",
-    techStack: [
-      "ASP.NET MVC",
-      "Honeywell Mobility Edge Android",
-      "SQL Server",
-      "NUnit",
-      "Moq"
-    ],
-    responsibilities: [
-      "Primarily focused on technical processes while also actively engaging with clients to provide business analysis, solution design, and support for their digital solutions",
-      "Developed and oversaw the architecture of RaBit, a product aimed at small and medium-sized companies to facilitate objective-focused management. Managed project delivery and quality control while contributing to technical and UI/UX vision",
-      "Other projects included developing a custom ERP warehouse management tool using Asp.Net Web API and Android mobile solutions, as well as an online consulting platform"
-    ]
-  },
-  {
-    jobTitle: "Software Developer, Pitech+Plus (Apr 2015 – Jul 2017)",
-    techStack: [
-      "ASP.NET MVC",
-      "ASP.NET Core Web API",
-      "Xamarin",
-      "Xamarin.Forms",
-      "Xamarin.Android",
-      "SQL Server",
-      "NUnit",
-      "Moq",
-      ".NET"
-    ],
-    responsibilities: [
-      "Managed and supported various .NET projects (ASP.NET MVC, ASP.NET/CORE WEBAPI, and Xamarin)",
-      "Designed and maintained SQL Server databases",
-      "Developed front-end and back-end features, analyzed code, and performed unit testing using NUnit and Moq",
-      "Documented applications and conducted Xamarin-Forms and Xamarin-Android workshops"
-    ]
-  },
-];
 
 const JobHistory = () => {
   const [activeIndex, setActiveIndex] = useState(null);
@@ -127,7 +11,7 @@ const JobHistory = () => {
   };
 
   return (
-    <div className="arlo_tm_section" id="work experience">
+    <div className="arlo_tm_section" id="experience">
       <div className="arlo_tm_faq">
         <div className="container">
           <div className="arlo_tm_main_title">
@@ -142,7 +26,7 @@ const JobHistory = () => {
                   onClick={() => toggleAccordion(index)}
                 >
                   <span className={`plus ${activeIndex === index ? 'open' : ''}`}></span>
-                  <p>{item.jobTitle}</p>
+                  <p>{item.role}, {item.company} ({item.period})</p>
                 </div>
                 {activeIndex === index && (
                   <div className="accordion_content">

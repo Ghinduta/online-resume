@@ -22,7 +22,7 @@ const newsItems = [
     date: "2025",
     sortDate: "2025-01-15",
     category: "Family Projects | Web & Mobile",
-    title: "Parenting millestones",
+    title: "Parenting Milestones",
     link:"https://github.com/nickerman/Parent-Pace",
     description: "A React-based parenting app delivering AI-curated, research-backed tips and insights for parents.",
     liveLink: "https://parentpace.org",
@@ -64,11 +64,13 @@ const News = () => (
             {newsItems.map((item, index) => (
               <li key={index}>
                 <div className="list_inner">
-                  <div className="image">
-                    <img src={item.thumb} alt="" />
-                    <div className="main" data-img-url={item.image}></div>
-                    <a className="arlo_tm_full_link" href="#"></a>
-                  </div>
+                  {item.thumb && (
+                    <div className="image">
+                      <img src={item.thumb} alt="" />
+                      <div className="main" data-img-url={item.image}></div>
+                      <a className="arlo_tm_full_link" href="#"></a>
+                    </div>
+                  )}
                   <div className="details">
                     <div className="meta">
                         <p>

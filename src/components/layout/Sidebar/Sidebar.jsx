@@ -9,7 +9,7 @@ const Sidebar = () => (
         <img src="/img/logo/logo.png" alt="logo" />
       </div>
       <div className="text">
-        <h3>ARLO</h3>
+        <h3>Ana Ghindariu</h3>
       </div>
     </div>
     <nav className="menu scrollable">
@@ -17,7 +17,7 @@ const Sidebar = () => (
         {[
           { id: 'home', label: 'Hello world!' },
           { id: 'skills', label: 'Skills' },
-          { id: 'work experience', label: 'Work experience' },
+          { id: 'experience', label: 'Work experience' },
           { id: 'education', label: 'Education' },
           { id: 'portfolio', label: 'Portfolio' },
           { id: 'contact', label: 'Contact' }

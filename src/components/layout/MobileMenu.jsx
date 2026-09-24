@@ -20,7 +20,7 @@ const MobileMenu = () => {
               <img src="/img/logo/logo.png" alt="" />
             </div>
             <div className="text">
-              <h3>ARLO</h3>
+              <h3>Ana Ghindariu</h3>
             </div>
           </div>
           <div className="trigger" onClick={toggleMenu}>
@@ -46,7 +46,7 @@ const MobileMenu = () => {
             {[
               { id: 'home', label: 'Hello world!' },
               { id: 'skills', label: 'Skills' },
-              { id: 'work experience', label: 'Work experience' },
+              { id: 'experience', label: 'Work experience' },
               { id: 'education', label: 'Education' },
               { id: 'portfolio', label: 'Portfolio' },
               { id: 'contact', label: 'Contact' }

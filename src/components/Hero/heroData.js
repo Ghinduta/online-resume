@@ -1,0 +1,2 @@
+// Single source for the intro: rendered by the main site (Hero.jsx), /console and cv.html.
+export const HERO_INTRO = "Senior .NET engineer with 10+ years turning early-stage and legacy backends into production-ready systems on Azure and AWS, with reliable integrations, clean data and sensible cloud bills. My latest engagement added a team-wide move to guarded, spec-driven, AI-assisted delivery that ships faster without lowering the bar.";

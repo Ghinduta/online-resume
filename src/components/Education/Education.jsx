@@ -7,7 +7,6 @@ import {
   faMotorcycle,
   faLaptopCode,
   faChartLine,
-  faMobileAlt,
   faBrain,
   faDna,
   faVials,
@@ -128,7 +127,7 @@ const Education = () => {
     label: "On-campus",
     certificateUrl: "https://drive.google.com/file/d/1iwnmS3eBCoeLfJlNCFY8upSSXVLJYJzL/view?usp=sharing",
     description: `
-    <h6>Bachelor's Thesis - Babeș-Bolyai University, Cluj-Napoca (June 2019)</h6>
+    <h6>Bachelor's Thesis - Babeș-Bolyai University, Cluj-Napoca (June 2015)</h6>
     <p>
       For my final thesis, I developed an Augmented Reality (AR) system tailored for motorcyclists to enhance road safety and accessibility during traffic navigation. The solution integrates real-time GPS localization, incoming call alerts, and vehicle motion tracking into a heads-up display mounted on the rider's helmet, allowing for minimal distraction and continuous focus on the road.
     </p>
@@ -165,10 +164,7 @@ const onlineEducation = services.filter(s => s.label === "Online").sort(
               <ul>
                 {onCampusEducation.map((service, idx) => (
                   <li key={idx}>
-                    <div className="list_inner" onClick={() => {
-                      console.log("Clicked service:", service);
-                      setSelectedService(service);
-                    }}>
+                    <div className="list_inner" onClick={() => setSelectedService(service)}>
                       <div className="in">
                         <span className="icon">
                           <FontAwesomeIcon icon={service.icon} size="lg" className="svg" />
@@ -200,10 +196,7 @@ const onlineEducation = services.filter(s => s.label === "Online").sort(
               <ul>
                 {onlineEducation.map((service, idx) => (
                 <li key={idx}>
-                  <div className="list_inner" onClick={() => {
-                    console.log("Clicked service:", service);
-                    setSelectedService(service);
-                  }}>
+                  <div className="list_inner" onClick={() => setSelectedService(service)}>
                     <div className="in">
                       <span className="icon">
                         <FontAwesomeIcon icon={service.icon} size="lg" className="svg" />
